@@ -5,7 +5,7 @@ import {
 import { ScreenRouter } from "./ScreenRouter"
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
+  <ChakraProvider theme={theme} resetCSS>
     <ScreenRouter />
   </ChakraProvider>
 )
