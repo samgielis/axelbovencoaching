@@ -1,4 +1,5 @@
-import { Button, Center, Link } from "@chakra-ui/react";
+import { Button, Center } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { CONTACT_PATH } from "../../routes";
 import { HeadingWithCTASection } from "./components/HeadingWithCTASection";
 
