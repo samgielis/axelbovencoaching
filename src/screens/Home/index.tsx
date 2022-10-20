@@ -1,6 +1,7 @@
 import { Box, Button, Center, Container, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 import { MIJN_MISSIE_PATH } from "../../routes"
+import { ContactSection } from "./ContactSection"
 import { MainSection } from "./MainSection"
 import { MijnMissieSection } from "./MijnMissieSection"
 
@@ -20,6 +21,6 @@ export const Home = () => {
             </Container>
         </Box>
 
-        <MijnMissieSection />
+        <ContactSection />
     </Stack>
 }
