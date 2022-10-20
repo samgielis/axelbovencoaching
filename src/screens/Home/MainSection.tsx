@@ -13,7 +13,7 @@ export const MainSection = () => {
         content: '""',
         pos:'absolute',
         backgroundSize: 'cover',
-        backgroundPosition: 'top',
+        backgroundPosition: 'center',
         zIndex: -1,
         opacity: .9
     }}>
