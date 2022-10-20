@@ -1,4 +1,4 @@
-import { Button, Link } from "@chakra-ui/react";
+import { Button, Center, Link } from "@chakra-ui/react";
 import { CONTACT_PATH } from "../../routes";
 import { HeadingWithCTASection } from "./components/HeadingWithCTASection";
 
@@ -7,15 +7,18 @@ export const ContactSection = () => {
     <HeadingWithCTASection
       title={"Heb je vragen of wil je graag samen verder?"}
     >
-      <Button
-        size={{ base: "md", sm: "lg" }}
-        fontSize="2xl"
-        as={Link}
-        colorScheme={"green"}
-        to={CONTACT_PATH}
-      >
-        Contacteer mij
-      </Button>
+      <Center>
+        <Button
+          size={{ base: "md", sm: "lg" }}
+          fontSize="2xl"
+          as={Link}
+          colorScheme={"green"}
+          to={CONTACT_PATH}
+          display="inline-flex"
+        >
+          Contacteer mij
+        </Button>
+      </Center>
     </HeadingWithCTASection>
   );
 };
