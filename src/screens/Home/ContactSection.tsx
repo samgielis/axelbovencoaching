@@ -1,12 +1,5 @@
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Link,
-  VStack,
-} from "@chakra-ui/react";
-import { CONTACT_PATH, MIJN_MISSIE_PATH } from "../../routes";
+import { Button, Link } from "@chakra-ui/react";
+import { CONTACT_PATH } from "../../routes";
 import { HeadingWithCTASection } from "./components/HeadingWithCTASection";
 
 export const ContactSection = () => {

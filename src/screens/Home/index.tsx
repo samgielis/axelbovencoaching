@@ -1,14 +1,4 @@
-import {
-  Box,
-  Button,
-  Center,
-  Container,
-  Heading,
-  Image,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Stack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { MIJN_MISSIE_PATH } from "../../routes";
 import { ContactSection } from "./ContactSection";

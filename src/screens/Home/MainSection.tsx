@@ -1,4 +1,4 @@
-import { Container, VStack, Heading, Box, Center } from "@chakra-ui/react";
+import { Box, Center, Container, Heading, VStack } from "@chakra-ui/react";
 import { useIsMobile } from "../../hooks/useIsMobile";
 
 export const MainSection = () => {

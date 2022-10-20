@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { ScreenRouter } from "./ScreenRouter";
 import { Helmet } from "react-helmet";
+import { ScreenRouter } from "./ScreenRouter";
 import theme from "./theme";
 
 export const App = () => (
