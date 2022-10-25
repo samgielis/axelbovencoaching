@@ -13,7 +13,7 @@ export const ContactSection = () => {
           size={{ base: "md", sm: "lg" }}
           fontSize="2xl"
           as={Link}
-          colorScheme={"green"}
+          colorScheme={"themeGreen"}
           to={CONTACT_PATH}
           display="inline-flex"
         >

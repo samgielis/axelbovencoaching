@@ -15,7 +15,7 @@ export const MijnMissieSection = () => {
         fontSize="2xl"
         as={Link}
         variant="link"
-        colorScheme={"green"}
+        colorScheme={"themeGreen"}
         to={MIJN_MISSIE_PATH}
       >
         Lees meer over mijn missie en hoe ik werk.

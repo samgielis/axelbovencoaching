@@ -26,8 +26,8 @@ export const OfferingCard = ({ type, title, summary, imageSrc }: OfferingCardPro
 
                 <Spacer />
 
-                <ButtonGroup size='sm'>
-                    <Button flex={.5} colorScheme='green'>Starten</Button>
+                <ButtonGroup size='sm' colorScheme='themeGreen'>
+                    <Button flex={.5}>Starten</Button>
                     <Button flex={.5} variant='link'>Meer leren</Button>
                 </ButtonGroup>
             </Stack>
@@ -40,5 +40,5 @@ interface OfferingTypeLabelProps {
 }
 
 const OfferingTypeLabel = ({ type }: OfferingTypeLabelProps) => {
-    return <span><Badge fontSize='sm' colorScheme={type === 'TRAJECT' ? 'green' : 'yellow'}>{type}</Badge></span>
+    return <span><Badge fontSize='sm' colorScheme={type === 'TRAJECT' ? 'themeGreen' : 'yellow'}>{type}</Badge></span>
 }

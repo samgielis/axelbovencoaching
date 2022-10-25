@@ -45,7 +45,7 @@ const NavigationMenu = () => {
       <Stack align={"end"}>
         {isMobile && (
           <IconButton
-            colorScheme={"green"}
+            colorScheme={"themeGreen"}
             isActive={isOpen}
             onClick={onToggle}
             icon={<FaBars />}
@@ -54,8 +54,8 @@ const NavigationMenu = () => {
         )}
         <Collapse in={showMenu}>
           <ButtonGroup
-            bg="green.500"
-            colorScheme={"green"}
+            bg="themeGreen.500"
+            colorScheme={"themeGreen"}
             p={2}
             flexDir={isMobile ? "column" : "row"}
             alignItems="center"
