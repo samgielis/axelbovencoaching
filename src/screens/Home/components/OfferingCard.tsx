@@ -40,5 +40,5 @@ interface OfferingTypeLabelProps {
 }
 
 const OfferingTypeLabel = ({ type }: OfferingTypeLabelProps) => {
-    return <span><Badge fontSize='sm' colorScheme={type === 'TRAJECT' ? 'themeGreen' : 'yellow'}>{type}</Badge></span>
+    return <span><Badge fontSize='sm' colorScheme={type === 'TRAJECT' ? 'themeGreen' : 'softYellow'}>{type}</Badge></span>
 }
