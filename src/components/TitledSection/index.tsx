@@ -11,12 +11,12 @@ export const TitledSection = ({
   title,
   bgColor,
   children,
-  useAsScrollbox
+  useAsScrollbox,
 }: TitledSectionProps) => {
   return (
     <Box py={16} bg={bgColor}>
       <Container maxW="container.xl" mb={10}>
-        <Heading size="2xl" color="white" textDecor='underline'>
+        <Heading size="2xl" color="white" textDecor="underline">
           {title}
         </Heading>
       </Container>
@@ -28,14 +28,16 @@ export const TitledSection = ({
         pos={"relative"}
       >
         {children}
-        {useAsScrollbox && <Box
-          w={5}
-          pos="absolute"
-          h="100%"
-          top={0}
-          right={0}
-          bgGradient={`linear(to-r, rgba(0,0,0,0), ${bgColor})`}
-        />}
+        {useAsScrollbox && (
+          <Box
+            w={5}
+            pos="absolute"
+            h="100%"
+            top={0}
+            right={0}
+            bgGradient={`linear(to-r, rgba(0,0,0,0), ${bgColor})`}
+          />
+        )}
       </Container>
     </Box>
   );
