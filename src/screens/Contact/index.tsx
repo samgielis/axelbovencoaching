@@ -1,5 +1,10 @@
-import { Text } from "@chakra-ui/react";
+import { PlaceholderScreen } from "../PlaceholderScreen";
 
 export const Contact = () => {
-  return <Text>This is the contact page</Text>;
+  return (
+    <PlaceholderScreen title="Contact">
+      We zijn momenteel nog druk bezig met het ontwikkelen van mijn website. Je
+      vindt hier binnenkort mijn contactgegevens.
+    </PlaceholderScreen>
+  );
 };
