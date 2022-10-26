@@ -1,14 +1,14 @@
 import { Box, Container, Heading, Stack } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 
-type HeadingWithCTASectionProps = PropsWithChildren<{
+type QuoteWithCTASectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-export const HeadingWithCTASection = ({
+export const QuoteWithCTASection = ({
   title,
   children: action,
-}: HeadingWithCTASectionProps) => {
+}: QuoteWithCTASectionProps) => {
   return (
     <Box w="100%" py={36}>
       <Container maxW="container.lg" centerContent p={2}>

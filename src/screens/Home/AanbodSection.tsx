@@ -1,10 +1,10 @@
 import { Box, HStack } from "@chakra-ui/react";
 import { OfferingCard } from "./components/OfferingCard";
-import { TitledSection } from "./components/TitledSection";
+import { TitledSection } from "../../components/TitledSection";
 
 export const AanbodSection = () => {
   return (
-    <TitledSection bgColor="themeGreen.400" title={"Aanbod"}>
+    <TitledSection bgColor="themeGreen.400" title={"Aanbod"} useAsScrollbox>
       <Box w="full" overflow={"auto"}>
         <HStack spacing={8} alignItems="stretch">
           <OfferingCard
