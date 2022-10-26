@@ -15,7 +15,7 @@ export const MainSection = () => {
         h: "100%",
         w: "100%",
         bgImage: "/main.jpg",
-        filter: "brightness(.9)",
+        filter: "brightness(.95)",
         content: '""',
         pos: "absolute",
         backgroundSize: "cover",
@@ -39,6 +39,7 @@ export const MainSection = () => {
           </VStack>
         </Center>
       </Container>
+      <Box pos='absolute' userSelect='none' pointerEvents='none' top={0} left={0} w='100%' h='100%' bg='themeGreen.500' opacity={.2}></Box>
     </Box>
   );
 };
