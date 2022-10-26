@@ -1,4 +1,4 @@
-import { Box, Button, Container, Heading, HStack, Stack, Wrap } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import { AanbodSection } from "./AanbodSection";
 import { ContactSection } from "./ContactSection";
 import { MainSection } from "./MainSection";

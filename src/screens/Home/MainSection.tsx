@@ -39,7 +39,17 @@ export const MainSection = () => {
           </VStack>
         </Center>
       </Container>
-      <Box pos='absolute' userSelect='none' pointerEvents='none' top={0} left={0} w='100%' h='100%' bg='themeGreen.500' opacity={.2}></Box>
+      <Box
+        pos="absolute"
+        userSelect="none"
+        pointerEvents="none"
+        top={0}
+        left={0}
+        w="100%"
+        h="100%"
+        bg="themeGreen.500"
+        opacity={0.2}
+      ></Box>
     </Box>
   );
 };
