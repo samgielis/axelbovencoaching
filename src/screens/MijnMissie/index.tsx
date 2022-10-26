@@ -1,5 +1,5 @@
-import { Text } from "@chakra-ui/react"
+import { Text } from "@chakra-ui/react";
 
 export const MijnMissie = () => {
-    return <Text>This is the missie page</Text>
-}
+  return <Text>This is the missie page</Text>;
+};

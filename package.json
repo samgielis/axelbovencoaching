@@ -15,6 +15,8 @@
     "@types/react-dom": "^18.0.4",
     "@types/react-helmet": "^6.1.5",
     "framer-motion": "^6.2.9",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.1.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
@@ -28,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
   },
   "eslintConfig": {
     "extends": "react-app"
