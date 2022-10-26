@@ -1,11 +1,11 @@
 import { Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { MIJN_MISSIE_PATH } from "../../routes";
-import { HeadingWithCTASection } from "./components/HeadingWithCTASection";
+import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
 
 export const MijnMissieSection = () => {
   return (
-    <HeadingWithCTASection
+    <QuoteWithCTASection
       title={
         '"Ik help mensen om binnenin rust en vrijheid te ervaren, ook als de buitenwereld woelig is."'
       }
@@ -20,6 +20,6 @@ export const MijnMissieSection = () => {
       >
         Lees meer over mijn missie en hoe ik werk.
       </Button>
-    </HeadingWithCTASection>
+    </QuoteWithCTASection>
   );
 };

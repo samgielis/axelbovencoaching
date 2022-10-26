@@ -1,11 +1,11 @@
 import { Button, Center } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { CONTACT_PATH } from "../../routes";
-import { HeadingWithCTASection } from "./components/HeadingWithCTASection";
+import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
 
 export const ContactSection = () => {
   return (
-    <HeadingWithCTASection
+    <QuoteWithCTASection
       title={"Heb je vragen of wil je graag samen verder?"}
     >
       <Center>
@@ -20,6 +20,6 @@ export const ContactSection = () => {
           Contacteer mij
         </Button>
       </Center>
-    </HeadingWithCTASection>
+    </QuoteWithCTASection>
   );
 };
