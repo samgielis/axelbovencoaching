@@ -1,6 +1,6 @@
 import { Box, HStack } from "@chakra-ui/react";
-import { OfferingCard } from "./components/OfferingCard";
 import { TitledSection } from "../../components/TitledSection";
+import { OfferingCard } from "./components/OfferingCard";
 
 export const AanbodSection = () => {
   return (

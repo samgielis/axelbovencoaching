@@ -1,7 +1,7 @@
 import { Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { MIJN_MISSIE_PATH } from "../../routes";
 import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
+import { MIJN_MISSIE_PATH } from "../../routes";
 
 export const MijnMissieSection = () => {
   return (
