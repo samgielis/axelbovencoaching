@@ -3,3 +3,8 @@
 [[edge_functions]]
 function = "fetchInstagramFeed"
 path = "/igfeed"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
