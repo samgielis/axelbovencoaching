@@ -26,8 +26,12 @@ export const Contact = () => {
         <SimpleGrid spacing={5} w="full" minChildWidth={"350px"}>
           <Card color="bodyText" p={4} flex={1}>
             <Stack spacing={4}>
+
               <Heading size="lg">Email</Heading>
+              {/* When you change this, change helper form in index as well */}
               <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
+
                 <Stack>
                   <FormControl>
                     <FormLabel>Onderwerp</FormLabel>
@@ -72,7 +76,7 @@ export const Contact = () => {
           <Stack flex={1} color="white" spacing={4} h="full">
             <Card flex={1}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.177217063847!2d5.045044816183421!3d51.068278579565344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c147fe633acc61%3A0xde5b7e435970c8b7!2sSchoterweg%20242%2C%203980%20Tessenderlo!5e0!3m2!1sen!2sbe!4v1666813764581!5m2!1sen!2sbe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10028.062197743913!2d5.035744372471718!3d51.0712630154928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1476f49d82a5f%3A0xcc20d4432680ddc3!2sAxel%20Boven%20Coaching!5e0!3m2!1sen!2sbe!4v1667840004047!5m2!1sen!2sbe"
                 title='Google Maps: Schoterweg 242b'
                 width="100%"
                 height="100%"
