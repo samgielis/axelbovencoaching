@@ -62,11 +62,11 @@ export const Contact = () => {
                 Je kan ook gewoon bij mij terecht via{" "}
                 <Button
                   size="lg"
-                  href="mailto:axelboven@outlook.be"
+                  href="mailto:info@axelbovencoaching.be"
                   as={Link}
                   variant="link"
                 >
-                  axelboven@outlook.be
+                  info@axelbovencoaching.be
                 </Button>
                 .
               </Text>
