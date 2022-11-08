@@ -7,7 +7,7 @@ import { MijnMissieSection } from "./MijnMissieSection";
 
 export const Home = () => {
   return (
-    <Stack w="full">
+    <Stack w="full" spacing={0}>
       <MainSection />
       <MijnMissieSection />
       <AanbodSection />
