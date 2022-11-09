@@ -1,4 +1,5 @@
 import { Stack } from "@chakra-ui/react";
+import { Helmet } from "react-helmet-async";
 import { AanbodSection } from "./AanbodSection";
 import { ContactSection } from "./ContactSection";
 import { GetuigenissenSection } from "./GetuigenissenSection";
@@ -7,12 +8,17 @@ import { MijnMissieSection } from "./MijnMissieSection";
 
 export const Home = () => {
   return (
-    <Stack w="full" spacing={0}>
-      <MainSection />
-      <MijnMissieSection />
-      <AanbodSection />
-      <GetuigenissenSection />
-      <ContactSection />
-    </Stack>
+    <>
+      <Helmet>
+        <title>Axel Boven Coacing</title>
+      </Helmet>
+      <Stack w="full" spacing={0}>
+        <MainSection />
+        <MijnMissieSection />
+        <AanbodSection />
+        <GetuigenissenSection />
+        <ContactSection />
+      </Stack>
+    </>
   );
 };
