@@ -9,24 +9,24 @@ export const GetuigenissenSection = () => {
         <ReviewCard
           name={"Nele Flamang"}
           subtitle={`Auteur "Als Je Van Spelen Leren Kan"`}
-          imageSrc='/getuigenissen/nele.jpg'
-          >
+          imageSrc="/getuigenissen/nele.jpg"
+        >
           Axel is een gids aan je zijde die zelf al goed door de modder heeft
           geploeterd en al meer dan voldoende op het droge heeft om een stevige
           hand uit te reiken.
         </ReviewCard>
-        <ReviewCard 
+        <ReviewCard
           name={"Toon Proost"}
           subtitle="Team Coach bij Ferm VZW"
-          imageSrc='/getuigenissen/toon.jpg'
-          >
+          imageSrc="/getuigenissen/toon.jpg"
+        >
           Axel luistert zonder oordeel en dat doet enorm veel deugd. Daarnaast
           durft hij de kern te benoemen, wat me heel erg verder helpt.
         </ReviewCard>
-        <ReviewCard 
-        name={"Lotte De Leeuw"}
-        subtitle="Loopbaancoach bij UAntwerpen."
-        imageSrc='/getuigenissen/lotte.jpg'
+        <ReviewCard
+          name={"Lotte De Leeuw"}
+          subtitle="Loopbaancoach bij UAntwerpen."
+          imageSrc="/getuigenissen/lotte.jpg"
         >
           Axel heeft een passie voor wat mensen beweegt. Dat zie je aan de
           sprankel in zijn ogen als hij je coacht. Axel kijkt naar je als mens
