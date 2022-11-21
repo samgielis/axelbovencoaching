@@ -1,4 +1,4 @@
-import { Avatar, Center, Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import { Avatar, Center, Heading, HStack, Stack, Text } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { Card } from "../../../components/Card";
 
@@ -22,9 +22,11 @@ export const ReviewCard = ({
             "{children}"
           </Text>
           <HStack spacing={4}>
-            <Avatar name={name} src={imageSrc} size='lg' />
+            <Avatar name={name} src={imageSrc} size="lg" />
             <Stack spacing={1}>
-              <Heading fontSize="2xl" textAlign={'start'}>{name}</Heading>
+              <Heading fontSize="2xl" textAlign={"start"}>
+                {name}
+              </Heading>
               <Heading fontSize="md" color="themeGreen.600">
                 {subtitle}
               </Heading>
