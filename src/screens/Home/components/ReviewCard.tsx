@@ -1,15 +1,17 @@
-import { Center, Heading, Stack, Text } from "@chakra-ui/react";
+import { Avatar, Center, Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { Card } from "../../../components/Card";
 
 interface ReviewCardProps {
   name: string;
   subtitle?: string;
+  imageSrc?: string;
 }
 
 export const ReviewCard = ({
   name,
   subtitle,
+  imageSrc,
   children,
 }: PropsWithChildren<ReviewCardProps>) => {
   return (
@@ -19,12 +21,15 @@ export const ReviewCard = ({
           <Text fontSize="xl" as={"i"}>
             "{children}"
           </Text>
-          <Stack>
-            <Heading fontSize="2xl">{name}</Heading>
-            <Heading fontSize="lg" color="themeGreen.600">
-              {subtitle}
-            </Heading>
-          </Stack>
+          <HStack spacing={4}>
+            <Avatar name={name} src={imageSrc} size='lg' />
+            <Stack spacing={1}>
+              <Heading fontSize="2xl" textAlign={'start'}>{name}</Heading>
+              <Heading fontSize="md" color="themeGreen.600">
+                {subtitle}
+              </Heading>
+            </Stack>
+          </HStack>
         </Stack>
       </Center>
     </Card>
