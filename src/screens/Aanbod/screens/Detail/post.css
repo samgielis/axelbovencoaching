@@ -1,0 +1,27 @@
+.wp-post {
+    font-size: var(--chakra-fontSizes-xl);
+    line-height: 1.6;
+}
+
+.wp-post p {
+    margin-top: var(--chakra-sizes-4);
+    margin-bottom: var(--chakra-sizes-4);
+}
+.wp-post > ul {
+    margin-left: 2em;
+}
+
+.wp-post ul ul {
+    margin-left: 2em;
+}
+.wp-post ul ul ul {
+    margin-left: 2em;
+}
+
+.wp-post ul ul ul ul {
+    margin-left: 2em;
+}
+
+.wp-post ul ul ul ul ul {
+    margin-left: 2em;
+}

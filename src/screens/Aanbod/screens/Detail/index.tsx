@@ -1,7 +1,8 @@
-import { Spinner } from "@chakra-ui/react";
+import { Container, Heading, Spinner, Stack } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { useLoadPost } from "../../../../data/wordpress/loaders/useLoadPost";
 import { usePreloadCategory } from "../../../../data/wordpress/loaders/usePreloadCategory";
+import "./post.css";
 
 export const Detail = () => {
   const { postslug } = useParams();
@@ -34,5 +35,21 @@ const DetailPostLoader = ({ postId }: DetailPostLoaderProps) => {
     return <p>Could not find post</p>;
   }
 
-  return <div dangerouslySetInnerHTML={{ __html: post.content }} />;
+  return (
+    <Container
+      maxWidth={"container.md"}
+      my={40}
+      __css={{ p: "margin-bottom: 10px" }}
+    >
+      <Stack spacing={10}>
+        <Heading as="h1" size="3xl">
+          {post.title}
+        </Heading>
+        <div
+          className="wp-post"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+      </Stack>
+    </Container>
+  );
 };
