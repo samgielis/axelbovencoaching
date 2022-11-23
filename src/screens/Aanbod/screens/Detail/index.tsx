@@ -1,7 +1,17 @@
-import { Container, Heading, Spinner, Stack } from "@chakra-ui/react";
+import { ChevronRightIcon } from "@chakra-ui/icons";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Container,
+  Heading,
+  Spinner,
+  Stack,
+} from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { useLoadPost } from "../../../../data/wordpress/loaders/useLoadPost";
 import { usePreloadCategory } from "../../../../data/wordpress/loaders/usePreloadCategory";
+import { AANBOD_PATH } from "../../../../routes";
 import "./post.css";
 
 export const Detail = () => {
@@ -42,6 +52,24 @@ const DetailPostLoader = ({ postId }: DetailPostLoaderProps) => {
       __css={{ p: "margin-bottom: 10px" }}
     >
       <Stack spacing={10}>
+        <Breadcrumb
+          colorScheme={"themeGreen"}
+          fontSize="lg"
+          spacing="8px"
+          separator={<ChevronRightIcon color="green.500" />}
+        >
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink href={AANBOD_PATH}>Aanbod</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink>{post.title}</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
         <Heading as="h1" size="3xl">
           {post.title}
         </Heading>
