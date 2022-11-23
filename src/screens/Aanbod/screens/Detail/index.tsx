@@ -5,7 +5,6 @@ import {
   BreadcrumbLink,
   Container,
   Heading,
-  Spinner,
   Stack,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
@@ -13,6 +12,7 @@ import { useLoadPost } from "../../../../data/wordpress/loaders/useLoadPost";
 import { usePreloadCategory } from "../../../../data/wordpress/loaders/usePreloadCategory";
 import { AANBOD_PATH } from "../../../../routes";
 import "./post.css";
+import { PostLoadingPlaceholder } from "./PostLoadingPlaceholder";
 
 export const Detail = () => {
   return (
@@ -27,7 +27,7 @@ export const DetailPreloader = () => {
   const { isLoading, category } = usePreloadCategory("aanbod");
 
   if (isLoading) {
-    return <Spinner />;
+    return <PostLoadingPlaceholder />;
   }
 
   const post = category?.posts.find((post) => post.slug === postslug);
@@ -46,7 +46,7 @@ const DetailPostLoader = ({ postId }: DetailPostLoaderProps) => {
   const { isLoading, post } = useLoadPost(postId);
 
   if (isLoading) {
-    return <Spinner />;
+    return <PostLoadingPlaceholder />;
   }
 
   if (!post) {
