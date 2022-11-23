@@ -7,6 +7,14 @@
     margin-top: var(--chakra-sizes-4);
     margin-bottom: var(--chakra-sizes-4);
 }
+
+.wp-post a {
+    color: var(--chakra-colors-themeGreen-500)
+}
+
+.wp-post a:hover {
+    text-decoration: underline;
+}
 .wp-post > ul {
     margin-left: 2em;
 }
