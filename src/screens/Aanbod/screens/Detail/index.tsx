@@ -15,6 +15,14 @@ import { AANBOD_PATH } from "../../../../routes";
 import "./post.css";
 
 export const Detail = () => {
+  return (
+    <Container maxWidth={"container.md"} my={40}>
+      <DetailPreloader />
+    </Container>
+  );
+};
+
+export const DetailPreloader = () => {
   const { postslug } = useParams();
   const { isLoading, category } = usePreloadCategory("aanbod");
 
@@ -46,38 +54,32 @@ const DetailPostLoader = ({ postId }: DetailPostLoaderProps) => {
   }
 
   return (
-    <Container
-      maxWidth={"container.md"}
-      my={40}
-      __css={{ p: "margin-bottom: 10px" }}
-    >
-      <Stack spacing={10}>
-        <Breadcrumb
-          colorScheme={"themeGreen"}
-          fontSize="lg"
-          spacing="8px"
-          separator={<ChevronRightIcon color="green.500" />}
-        >
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/">Home</BreadcrumbLink>
-          </BreadcrumbItem>
+    <Stack spacing={10}>
+      <Breadcrumb
+        colorScheme={"themeGreen"}
+        fontSize="lg"
+        spacing="8px"
+        separator={<ChevronRightIcon color="green.500" />}
+      >
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
 
-          <BreadcrumbItem>
-            <BreadcrumbLink href={AANBOD_PATH}>Aanbod</BreadcrumbLink>
-          </BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbLink href={AANBOD_PATH}>Aanbod</BreadcrumbLink>
+        </BreadcrumbItem>
 
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink>{post.title}</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-        <Heading as="h1" size="3xl">
-          {post.title}
-        </Heading>
-        <div
-          className="wp-post"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
-      </Stack>
-    </Container>
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink>{post.title}</BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+      <Heading as="h1" size="3xl">
+        {post.title}
+      </Heading>
+      <div
+        className="wp-post"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      />
+    </Stack>
   );
 };
