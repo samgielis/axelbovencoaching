@@ -1,5 +1,6 @@
 import { Spinner } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import { useLoadPost } from "../../../../data/wordpress/loaders/useLoadPost";
 import { usePreloadCategory } from "../../../../data/wordpress/loaders/usePreloadCategory";
 
 export const Detail = () => {
@@ -10,18 +11,28 @@ export const Detail = () => {
     return <Spinner />;
   }
 
-  const post = JSON.stringify(category?.posts.find((post) => post.slug === postslug));
+  const post = category?.posts.find((post) => post.slug === postslug);
 
-  return (
-    <p>
-    </p>
-  );
+  if (!post) {
+    return <p>Could not find post</p>;
+  }
+  return <DetailPostLoader postId={post.ID} />;
 };
 
 interface DetailPostLoaderProps {
-    postId: string;
+  postId: string;
 }
 
-const DetailPostLoader = ({postId}: DetailPostLoaderProps) => {
+const DetailPostLoader = ({ postId }: DetailPostLoaderProps) => {
+  const { isLoading, post } = useLoadPost(postId);
 
-}
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  if (!post) {
+    return <p>Could not find post</p>;
+  }
+
+  return <div dangerouslySetInnerHTML={{ __html: post.content }} />;
+};
