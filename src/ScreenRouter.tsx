@@ -12,11 +12,13 @@ import { Blog } from "./screens/Blog";
 import { Contact } from "./screens/Contact";
 import { Home } from "./screens/Home";
 import { MijnMissie } from "./screens/MijnMissie";
+import ScrollToTop from "./ScrollToTop";
 
 export const ScreenRouter = () => {
   return (
     <BrowserRouter>
       <Layout>
+        <ScrollToTop />
         <Routes>
           <Route path={HOME_PATH} element={<Home />} />
           <Route path={MIJN_MISSIE_PATH} element={<MijnMissie />} />
