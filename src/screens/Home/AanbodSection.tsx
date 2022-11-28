@@ -1,36 +1,35 @@
 import { Box, HStack } from "@chakra-ui/react";
 import { TitledSection } from "../../components/TitledSection";
+import { usePreloadCategory } from "../../data/wordpress/loaders/usePreloadCategory";
 import { OfferingCard } from "./components/OfferingCard";
 
 export const AanbodSection = () => {
+  const { isLoading, category } = usePreloadCategory("aanbod");
+
+  if (isLoading) return null;
+
   return (
     <TitledSection bgColor="themeGreen.400" title={"Aanbod"} useAsScrollbox>
       <Box w="full" overflow={"auto"}>
         <HStack spacing={8} alignItems="stretch">
-          <OfferingCard
-            type="TRAJECT"
-            title={"Innerlijk Anker"}
-            imageSrc={"/offerings/innerlijkanker.jpg"}
-            summary={
-              "Leven in een wereld waarin iedereen zich vrij en veilig voelt in eigen hoofd en eigen lijf. Ik creeer plekken, momenten, ontmoetingen... die jou toelaten ongeremd jezelf te zijn en die stimuleren om im het hier en nu te komen."
-            }
-          />
-          <OfferingCard
-            type={"WORKSHOP"}
-            title={"Bewegen naar vrijheid: Deel 1"}
-            imageSrc={"/offerings/innerlijkanker.jpg"}
-            summary={
-              "Leven in een wereld waarin iedereen zich vrij en veilig voelt in eigen hoofd en eigen lijf. Ik creeer plekken, momenten, ontmoetingen... die jou toelaten ongeremd jezelf te zijn en die stimuleren om im het hier en nu te komen."
-            }
-          />
-          <OfferingCard
-            type={"WORKSHOP"}
-            title={"Bewegen naar vrijheid: Deel 2"}
-            imageSrc={"/offerings/innerlijkanker.jpg"}
-            summary={
-              "Leven in een wereld waarin iedereen zich vrij en veilig voelt in eigen hoofd en eigen lijf. Ik creeer plekken, momenten, ontmoetingen... die jou toelaten ongeremd jezelf te zijn en die stimuleren om im het hier en nu te komen."
-            }
-          />
+          {category?.posts.map((post) => {
+            console.log(post.tags);
+            const type = Object.keys(post.tags).find(
+              (tag) => tag === "Workshop"
+            )
+              ? "WORKSHOP"
+              : "TRAJECT";
+            return (
+              <OfferingCard
+                href={`/aanbod/${post.slug}`}
+                key={post.ID}
+                type={type}
+                title={post.title}
+                imageSrc={post.featured_image}
+                summary={post.excerpt}
+              />
+            );
+          })}
         </HStack>
       </Box>
     </TitledSection>
