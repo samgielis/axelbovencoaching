@@ -15,7 +15,7 @@ export function usePreloadCategory(
 
   useEffect(() => {
     fetch(
-      `${WPConfig.apiEndpoint}/posts?category=${categoryName}&fields=slug,ID`
+      `${WPConfig.apiEndpoint}/posts?category=${categoryName}&fields=slug,ID,excerpt,title,featured_image,tags`
     )
       .then((response) => response.json())
       .then((data) => {

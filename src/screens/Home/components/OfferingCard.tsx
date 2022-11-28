@@ -44,7 +44,7 @@ export const OfferingCard = ({
 
           <Spacer />
 
-          <Text>{summary}</Text>
+          <Text dangerouslySetInnerHTML={{__html: summary}}/>
 
           <Spacer />
 
