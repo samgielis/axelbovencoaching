@@ -15,6 +15,7 @@ export const AanbodSection = () => {
           {category?.posts.map(post => {console.log(post.tags);
           const type = Object.keys(post.tags).find(tag => tag === 'Workshop') ? 'WORKSHOP' : 'TRAJECT'
           return <OfferingCard
+          href={`/aanbod/${post.slug}`}
           key={post.ID}
             type={type}
             title={post.title}

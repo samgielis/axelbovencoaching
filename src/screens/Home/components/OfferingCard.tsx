@@ -10,6 +10,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 type OfferingType = "WORKSHOP" | "TRAJECT";
 
@@ -18,6 +19,7 @@ interface OfferingCardProps {
   title: string;
   imageSrc: string;
   summary: string;
+  href: string;
 }
 
 export const OfferingCard = ({
@@ -25,6 +27,7 @@ export const OfferingCard = ({
   title,
   summary,
   imageSrc,
+  href,
 }: OfferingCardProps) => {
   return (
     <Box
@@ -49,8 +52,8 @@ export const OfferingCard = ({
           <Spacer />
 
           <ButtonGroup size="sm" colorScheme="themeGreen">
-            <Button flex={0.5}>Starten</Button>
-            <Button flex={0.5} variant="link">
+            <Button as={Link} to={href} flex={0.5}>Starten</Button>
+            <Button as={Link} to={href} flex={0.5} variant="link">
               Meer leren
             </Button>
           </ButtonGroup>
