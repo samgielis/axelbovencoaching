@@ -18,7 +18,7 @@ export function useLoadPost(postId: string): useLoadPostReturn {
         setIsLoading(false);
         setPost(data);
       });
-  }, []);
+  }, [postId]);
 
   return {
     isLoading,

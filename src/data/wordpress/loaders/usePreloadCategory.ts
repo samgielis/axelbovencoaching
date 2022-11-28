@@ -22,7 +22,7 @@ export function usePreloadCategory(
         setIsLoading(false);
         setCategory(data);
       });
-  }, []);
+  }, [categoryName]);
 
   return {
     isLoading,
