@@ -12,16 +12,24 @@ export const AanbodSection = () => {
     <TitledSection bgColor="themeGreen.400" title={"Aanbod"} useAsScrollbox>
       <Box w="full" overflow={"auto"}>
         <HStack spacing={8} alignItems="stretch">
-          {category?.posts.map(post => {console.log(post.tags);
-          const type = Object.keys(post.tags).find(tag => tag === 'Workshop') ? 'WORKSHOP' : 'TRAJECT'
-          return <OfferingCard
-          href={`/aanbod/${post.slug}`}
-          key={post.ID}
-            type={type}
-            title={post.title}
-            imageSrc={post.featured_image}
-            summary={post.excerpt}
-          />})}
+          {category?.posts.map((post) => {
+            console.log(post.tags);
+            const type = Object.keys(post.tags).find(
+              (tag) => tag === "Workshop"
+            )
+              ? "WORKSHOP"
+              : "TRAJECT";
+            return (
+              <OfferingCard
+                href={`/aanbod/${post.slug}`}
+                key={post.ID}
+                type={type}
+                title={post.title}
+                imageSrc={post.featured_image}
+                summary={post.excerpt}
+              />
+            );
+          })}
         </HStack>
       </Box>
     </TitledSection>
