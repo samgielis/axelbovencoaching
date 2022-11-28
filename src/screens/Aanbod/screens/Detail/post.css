@@ -3,9 +3,15 @@
     line-height: 1.6;
 }
 
-.wp-post p {
+.wp-post p, .wp-post h2 {
     margin-top: var(--chakra-sizes-4);
     margin-bottom: var(--chakra-sizes-4);
+}
+
+.wp-post h2 {
+    margin-top: var(--chakra-sizes-8);
+    font-weight: 300;
+    font-size: 1.75rem;
 }
 
 .wp-post a {
