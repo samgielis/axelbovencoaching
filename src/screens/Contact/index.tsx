@@ -93,15 +93,28 @@ export const Contact = () => {
             </Stack>
           </SimpleGrid>
         </TitledSection>
-        <TitledSection bgColor={"themeGreen.100"} title={"Intake gesprekken"}>
+        <TitledSection
+          bgColor={"themeGreen.100"}
+          title={"Kennismakingsgesprek"}
+        >
           <Stack>
             <Text fontSize="xl">
-              Als je een traject gekozen hebt starten we met een intake gesprek.
-              Zo'n gesprek zorgt er voor dat we elkaar kunnen leren kennen en
-              aanvoelen. Mijn intake gesprekken duren anderhalf uur en gaan al
-              wandelend door. We vertrekken bij mij thuis, Schoterweg 242b in
-              Tessenderlo.
+              Heb je nog vragen? Of wil je graag een individueel traject
+              starten? Reserveer dan hier je plekje voor een (gratis) online
+              kennismakingsgesprek via Zoom.
             </Text>
+            {/*<!-- Calendly inline widget begin -->*/}
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/samgielis?text_color=1a202c&primary_color=7ba05f"
+              style={{ minWidth: "320px", height: "630px" }}
+            ></div>
+            <script
+              type="text/javascript"
+              src="https://assets.calendly.com/assets/external/widget.js"
+              async
+            ></script>
+            {/*<!-- Calendly inline widget end -->*/}
           </Stack>
         </TitledSection>
       </Stack>
