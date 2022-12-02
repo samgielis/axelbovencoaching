@@ -93,7 +93,7 @@ export const Contact = () => {
             </Stack>
           </SimpleGrid>
         </TitledSection>
-        <TitledSection bgColor={"themeGreen.100"} title={"Intake gesprekken"}>
+        <TitledSection bgColor={"themeGreen.100"} title={"Kennismakingsgesprek"}>
           <Stack>
             <Text fontSize="xl">
               Als je een traject gekozen hebt starten we met een intake gesprek.
