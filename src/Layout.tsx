@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { FaBars } from "react-icons/fa";
-import { Link, LinkProps, useMatch } from "react-router-dom";
+import { Link, useMatch } from "react-router-dom";
 import { useIsMobile } from "./hooks/useIsMobile";
 import {
   AANBOD_PATH,
@@ -61,7 +61,6 @@ const NavigationMenu = () => {
             alignItems="center"
             boxShadow="lg"
           >
-
             <NavigationButton to={HOME_PATH} title="Home" />
             <NavigationButton to={MIJN_MISSIE_PATH} title="Mijn missie" />
             <NavigationButton to={AANBOD_PATH} title="Aanbod" />
@@ -80,8 +79,10 @@ interface NavigationButtonProps {
 }
 
 const NavigationButton = ({ to, title }: NavigationButtonProps) => {
-  const a = useMatch(`${to}/*`)
-  return <Button as={Link} to={to} isActive={!!a}>
-    {title}
-  </Button>
-}
+  const a = useMatch(`${to}/*`);
+  return (
+    <Button as={Link} to={to} isActive={!!a}>
+      {title}
+    </Button>
+  );
+};
