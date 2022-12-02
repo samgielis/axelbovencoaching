@@ -106,14 +106,10 @@ export const Contact = () => {
             {/*<!-- Calendly inline widget begin -->*/}
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/samgielis?text_color=1a202c&primary_color=7ba05f"
-              style={{ minWidth: "320px", height: "630px" }}
+              data-url="https://calendly.com/axelboven?text_color=1a202c&primary_color=7ba05f&hide_landing_page_details=1&hide_gdpr_banner=1"
+              style={{ width: "100%", height: "1000px" }}
             ></div>
-            <script
-              type="text/javascript"
-              src="https://assets.calendly.com/assets/external/widget.js"
-              async
-            ></script>
+            
             {/*<!-- Calendly inline widget end -->*/}
           </Stack>
         </TitledSection>
