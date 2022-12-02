@@ -23,7 +23,7 @@ export const ScreenRouter = () => {
           <Route path={HOME_PATH} element={<Home />} />
           <Route path={MIJN_MISSIE_PATH} element={<MijnMissie />} />
           <Route path={`${AANBOD_PATH}/*`} element={<Aanbod />} />
-          <Route path={BLOG_PATH} element={<Blog />} />
+          <Route path={`${BLOG_PATH}/*`} element={<Blog />} />
           <Route path={CONTACT_PATH} element={<Contact />} />
         </Routes>
       </Layout>

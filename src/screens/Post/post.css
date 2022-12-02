@@ -39,3 +39,12 @@
 .wp-post ul ul ul ul ul {
     margin-left: 2em;
 }
+
+.wp-post blockquote {
+    border-left: 1px solid;
+    padding-left: var(--chakra-space-4);
+}
+
+.wp-post cite {
+    font-size: var(--chakra-fontSizes-md);
+}
