@@ -1,5 +1,5 @@
-import { Container } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import { PageContainer } from "../../../../components/PageContainer";
 import { usePreloadCategory } from "../../../../data/wordpress/loaders/usePreloadCategory";
 import { BLOG_PATH } from "../../../../routes";
 import { Post } from "../../../Post";
@@ -7,9 +7,9 @@ import { PostLoadingPlaceholder } from "../../../Post/PostLoadingPlaceholder";
 
 export const BlogPost = () => {
   return (
-    <Container maxWidth={"container.md"} my={40}>
+    <PageContainer>
       <BlogPostPreloader />
-    </Container>
+    </PageContainer>
   );
 };
 
