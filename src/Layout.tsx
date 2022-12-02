@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { FaBars } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, LinkProps, useMatch } from "react-router-dom";
 import { useIsMobile } from "./hooks/useIsMobile";
 import {
   AANBOD_PATH,
@@ -61,24 +61,27 @@ const NavigationMenu = () => {
             alignItems="center"
             boxShadow="lg"
           >
-            <Button as={Link} to={HOME_PATH}>
-              Home
-            </Button>
-            <Button as={Link} to={MIJN_MISSIE_PATH}>
-              Mijn missie
-            </Button>
-            <Button as={Link} to={AANBOD_PATH}>
-              Aanbod
-            </Button>
-            <Button as={Link} to={BLOG_PATH}>
-              Blog
-            </Button>
-            <Button as={Link} to={CONTACT_PATH}>
-              Contact
-            </Button>
+
+            <NavigationButton to={HOME_PATH} title="Home" />
+            <NavigationButton to={MIJN_MISSIE_PATH} title="Mijn missie" />
+            <NavigationButton to={AANBOD_PATH} title="Aanbod" />
+            <NavigationButton to={BLOG_PATH} title="Blog" />
+            <NavigationButton to={CONTACT_PATH} title="Contact" />
           </ButtonGroup>
         </Collapse>
       </Stack>
     </chakra.nav>
   );
 };
+
+interface NavigationButtonProps {
+  to: string;
+  title: string;
+}
+
+const NavigationButton = ({ to, title }: NavigationButtonProps) => {
+  const a = useMatch(`${to}/*`)
+  return <Button as={Link} to={to} isActive={!!a}>
+    {title}
+  </Button>
+}
