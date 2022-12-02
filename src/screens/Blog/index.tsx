@@ -1,17 +1,12 @@
-import { Helmet } from "react-helmet-async";
-import { PlaceholderScreen } from "../PlaceholderScreen";
+import { Route, Routes } from "react-router-dom";
+import { BlogPost } from "./screens/BlogPost";
+import { Overview } from "./screens/Overview";
 
 export const Blog = () => {
   return (
-    <>
-      <Helmet>
-        <title>Blog - Axel Boven Coaching</title>
-      </Helmet>
-      <PlaceholderScreen title="Blog">
-        We zijn momenteel nog druk bezig met het ontwikkelen van mijn website.
-        Wanneer mijn blog opgestart is vind je hier updates over mijn
-        experimenten, interessante lectuur en andere bevindingen.
-      </PlaceholderScreen>
-    </>
+    <Routes>
+      <Route index element={<Overview />} />
+      <Route path=":postslug" element={<BlogPost />} />
+    </Routes>
   );
 };

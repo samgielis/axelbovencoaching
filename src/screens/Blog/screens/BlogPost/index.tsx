@@ -1,21 +1,21 @@
 import { Container } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { usePreloadCategory } from "../../../../data/wordpress/loaders/usePreloadCategory";
-import { AANBOD_PATH } from "../../../../routes";
+import { BLOG_PATH } from "../../../../routes";
 import { Post } from "../../../Post";
 import { PostLoadingPlaceholder } from "../../../Post/PostLoadingPlaceholder";
 
-export const Detail = () => {
+export const BlogPost = () => {
   return (
     <Container maxWidth={"container.md"} my={40}>
-      <DetailPreloader />
+      <BlogPostPreloader />
     </Container>
   );
 };
 
-export const DetailPreloader = () => {
+const BlogPostPreloader = () => {
   const { postslug } = useParams();
-  const { isLoading, category } = usePreloadCategory("aanbod");
+  const { isLoading, category } = usePreloadCategory("blog");
 
   if (isLoading) {
     return <PostLoadingPlaceholder />;
@@ -26,7 +26,5 @@ export const DetailPreloader = () => {
   if (!post) {
     return <p>Could not find post</p>;
   }
-  return (
-    <Post postId={post.ID} category={{ name: "Aanbod", path: AANBOD_PATH }} />
-  );
+  return <Post postId={post.ID} category={{ name: "Blog", path: BLOG_PATH }} />;
 };
