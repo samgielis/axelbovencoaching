@@ -42,7 +42,7 @@ const ListofBlogPosts = () => {
 
   return (
     <Stack spacing={10}>
-      <Heading size="3xl">Axel's blog</Heading>
+      <Heading size="3xl">Blog</Heading>
       {category?.posts.map((post) => (
         <BlogPostCard key={post.ID} post={post} />
       ))}
