@@ -16,4 +16,5 @@ export interface WPPostPreload {
   tags: { [tagName: string]: WPTag };
   excerpt: HTMLString;
   featured_image: string;
+  date: string;
 }
