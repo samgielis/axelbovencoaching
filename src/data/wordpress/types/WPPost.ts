@@ -4,8 +4,6 @@ type HTMLString = string;
 type DateString = string;
 
 export interface WPPost extends WPPostPreload {
-  featured_image: string;
-  date: DateString;
   content: HTMLString;
 }
 
@@ -16,5 +14,5 @@ export interface WPPostPreload {
   tags: { [tagName: string]: WPTag };
   excerpt: HTMLString;
   featured_image: string;
-  date: string;
+  date: DateString;
 }
