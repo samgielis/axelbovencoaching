@@ -21,6 +21,12 @@
 .wp-post a:hover {
     text-decoration: underline;
 }
+
+.wp-post li {
+    margin-top: var(--chakra-sizes-2);
+    margin-bottom: var(--chakra-sizes-2);
+}
+
 .wp-post > ul {
     margin-left: 2em;
 }
@@ -37,6 +43,25 @@
 }
 
 .wp-post ul ul ul ul ul {
+    margin-left: 2em;
+}
+
+.wp-post > ol {
+    margin-left: 2em;
+}
+
+.wp-post ol ol {
+    margin-left: 2em;
+}
+.wp-post ol ol ol {
+    margin-left: 2em;
+}
+
+.wp-post ol ol ol ol {
+    margin-left: 2em;
+}
+
+.wp-post ol ol ol ol ol {
     margin-left: 2em;
 }
 
