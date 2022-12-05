@@ -25,17 +25,17 @@ export const Overview = () => {
       <Helmet>
         <title>Blog - Axel Boven Coaching</title>
       </Helmet>
-      <Stack spacing={0} w='full'>
-      <QuoteWithCTASection
+      <Stack spacing={0} w="full">
+        <QuoteWithCTASection
           title={
             '"The use of our intelligence quite properly gives us pleasure. In this respect the brain is like a muscle. When we think well, we feel good. Understanding is a kind of ecstacy."'
           }
         />
-      <Box bg="themeGreen.50" minH="100vh">
-        <PageContainer hasCustomHeading>
-          <ListofBlogPosts />
-        </PageContainer>
-      </Box>
+        <Box bg="themeGreen.50" minH="100vh">
+          <PageContainer hasCustomHeading>
+            <ListofBlogPosts />
+          </PageContainer>
+        </Box>
       </Stack>
     </>
   );
