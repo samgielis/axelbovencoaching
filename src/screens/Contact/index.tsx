@@ -3,8 +3,8 @@ import {
   FormControl,
   FormLabel,
   Heading,
+  HStack,
   Input,
-  Link,
   SimpleGrid,
   Stack,
   Text,
@@ -12,9 +12,11 @@ import {
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Card } from "../../components/Card";
 import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
 import { TitledSection } from "../../components/TitledSection";
+import { ALGEMENE_VOORWAARDEN_PATH, PRIVACY_BELEID_PATH } from "../../routes";
 
 declare global {
   var Calendly: any;
@@ -43,7 +45,7 @@ export const Contact = () => {
             '"A mind that is stretched, can never go back to its old dimensions"'
           }
         />
-        <TitledSection bgColor={"themeGreen.400"} title={"Contact"}>
+        <TitledSection bgColor={"themeGreen.100"} title={"Contact"}>
           <SimpleGrid spacing={5} w="full" minChildWidth={"350px"}>
             <Card color="bodyText" p={4} flex={1}>
               <Stack spacing={4}>
@@ -83,8 +85,9 @@ export const Contact = () => {
                   <Button
                     size="lg"
                     href="mailto:info@axelbovencoaching.be"
-                    as={Link}
+                    as={'a'}
                     variant="link"
+                    colorScheme='themeGreen'
                   >
                     info@axelbovencoaching.be
                   </Button>
@@ -110,7 +113,7 @@ export const Contact = () => {
           </SimpleGrid>
         </TitledSection>
         <TitledSection
-          bgColor={"themeGreen.100"}
+          bgColor={"themeGreen.300"}
           title={"Kennismakingsgesprek"}
         >
           <Stack spacing={4}>
@@ -119,7 +122,14 @@ export const Contact = () => {
               starten? Reserveer dan hier je plekje voor een (gratis) online
               kennismakingsgesprek via Zoom.
             </Text>
-            <div id="calendly-container" style={{ height: "1000px" }} />
+            <div id="calendly-container" style={{ height: "900px" }} />
+          </Stack>
+        </TitledSection>
+
+        <TitledSection title='Policies' bgColor={"themeGreen.500"}>
+          <Stack w='100%' p={4}>
+            <Button as={Link} colorScheme={'gray'} to={PRIVACY_BELEID_PATH}>Privacybeleid</Button>
+            <Button as={Link} colorScheme={'gray'} to={ALGEMENE_VOORWAARDEN_PATH}>Algemene voorwaarden</Button>
           </Stack>
         </TitledSection>
       </Stack>
