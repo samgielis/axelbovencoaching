@@ -3,7 +3,6 @@ import {
   FormControl,
   FormLabel,
   Heading,
-  HStack,
   Input,
   SimpleGrid,
   Stack,
@@ -85,9 +84,9 @@ export const Contact = () => {
                   <Button
                     size="lg"
                     href="mailto:info@axelbovencoaching.be"
-                    as={'a'}
+                    as={"a"}
                     variant="link"
-                    colorScheme='themeGreen'
+                    colorScheme="themeGreen"
                   >
                     info@axelbovencoaching.be
                   </Button>
@@ -126,10 +125,18 @@ export const Contact = () => {
           </Stack>
         </TitledSection>
 
-        <TitledSection title='Policies' bgColor={"themeGreen.500"}>
-          <Stack w='100%' p={4}>
-            <Button as={Link} colorScheme={'gray'} to={PRIVACY_BELEID_PATH}>Privacybeleid</Button>
-            <Button as={Link} colorScheme={'gray'} to={ALGEMENE_VOORWAARDEN_PATH}>Algemene voorwaarden</Button>
+        <TitledSection title="Policies" bgColor={"themeGreen.500"}>
+          <Stack w="100%" p={4}>
+            <Button as={Link} colorScheme={"gray"} to={PRIVACY_BELEID_PATH}>
+              Privacybeleid
+            </Button>
+            <Button
+              as={Link}
+              colorScheme={"gray"}
+              to={ALGEMENE_VOORWAARDEN_PATH}
+            >
+              Algemene voorwaarden
+            </Button>
           </Stack>
         </TitledSection>
       </Stack>
