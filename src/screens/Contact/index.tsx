@@ -10,26 +10,26 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Card } from "../../components/Card";
 import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
 import { TitledSection } from "../../components/TitledSection";
 
 declare global {
-   var Calendly: any;
+  var Calendly: any;
 }
 
 export const Contact = () => {
   useEffect(() => {
-    const calendlyContainer = document.getElementById('calendly-container');
+    const calendlyContainer = document.getElementById("calendly-container");
     if (calendlyContainer?.hasChildNodes()) return;
     Calendly.initInlineWidget({
-      url: 'https://calendly.com/axelboven/kennismakingsgesprek?text_color=1a202c&primary_color=7ba05f&hide_landing_page_details=1&hide_gdpr_banner=1',
-      parentElement: document.getElementById('calendly-container'),
+      url: "https://calendly.com/axelboven/kennismakingsgesprek?text_color=1a202c&primary_color=7ba05f&hide_landing_page_details=1&hide_gdpr_banner=1",
+      parentElement: document.getElementById("calendly-container"),
       prefill: {},
-      utm: {}
-     });
+      utm: {},
+    });
   });
 
   return (
@@ -119,7 +119,7 @@ export const Contact = () => {
               starten? Reserveer dan hier je plekje voor een (gratis) online
               kennismakingsgesprek via Zoom.
             </Text>
-            <div id="calendly-container" style={{height:'1000px'}}/>
+            <div id="calendly-container" style={{ height: "1000px" }} />
           </Stack>
         </TitledSection>
       </Stack>
