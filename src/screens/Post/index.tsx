@@ -41,34 +41,37 @@ export const Post = ({ postId, category, hideDate }: PostProps) => {
         <title>{`${post.title} - Axel Boven Coaching`}</title>
       </Helmet>
       <Stack spacing={10}>
-        {category && <Breadcrumb
-          colorScheme={"themeGreen"}
-          fontSize="lg"
-          spacing="8px"
-          separator={<ChevronRightIcon color="green.500" />}
-        >
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/">Home</BreadcrumbLink>
-          </BreadcrumbItem>
+        {category && (
+          <Breadcrumb
+            colorScheme={"themeGreen"}
+            fontSize="lg"
+            spacing="8px"
+            separator={<ChevronRightIcon color="green.500" />}
+          >
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
 
-          <BreadcrumbItem>
-            <BreadcrumbLink href={category.path}>
-              {category.name}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
+            <BreadcrumbItem>
+              <BreadcrumbLink href={category.path}>
+                {category.name}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
 
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink>{post.title}</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-        }
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink>{post.title}</BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        )}
         <Stack spacing={5}>
           <Heading as="h1" size="3xl">
             {post.title}
           </Heading>
-          {!hideDate && <Text as={"em"}>
-            <HumanDate date={postDate} />
-          </Text>}
+          {!hideDate && (
+            <Text as={"em"}>
+              <HumanDate date={postDate} />
+            </Text>
+          )}
         </Stack>
         <div
           className="wp-post"
