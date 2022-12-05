@@ -1,5 +1,6 @@
 import { Box, Container, Stack } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
+import { PageContainer } from "../../components/PageContainer";
 import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
 import { Post } from "../Post";
 
@@ -17,9 +18,9 @@ export const MijnMissie = () => {
           }
         />
         <Box bg="themeGreen.50" minH="100vh">
-          <Container maxW="container.lg" pt={20} pb={40}>
+          <PageContainer hasCustomHeading>
             <Post postId={MISSIE_POST_ID} hideDate />
-          </Container>
+          </PageContainer>
         </Box>
       </Stack>
     </>

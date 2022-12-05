@@ -7,9 +7,9 @@ export const MijnMissieSection = () => {
   return (
     <QuoteWithCTASection
       title={
-        '"Ik help mensen om binnenin rust en vrijheid te ervaren, ook als de buitenwereld woelig is."'
+        '"Lend me your eyes I can change what you see, but your soul you must keep totally free"'
       }
-    >
+      >
       <Button
         size={{ base: "md", sm: "lg" }}
         fontSize="2xl"
@@ -17,7 +17,7 @@ export const MijnMissieSection = () => {
         variant="link"
         colorScheme={"themeGreen"}
         to={MIJN_MISSIE_PATH}
-      >
+        >
         Lees meer over mijn missie en hoe ik werk.
       </Button>
     </QuoteWithCTASection>

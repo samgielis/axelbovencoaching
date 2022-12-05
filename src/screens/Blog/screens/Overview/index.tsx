@@ -13,6 +13,7 @@ import { AppLink } from "../../../../components/AppLink";
 import { Card } from "../../../../components/Card";
 import { HumanDate } from "../../../../components/HumanDate";
 import { PageContainer } from "../../../../components/PageContainer";
+import { QuoteWithCTASection } from "../../../../components/QuoteWithCTASection";
 import { usePreloadCategory } from "../../../../data/wordpress/loaders/usePreloadCategory";
 import { WPPostPreload } from "../../../../data/wordpress/types/WPPost";
 import { useIsMobile } from "../../../../hooks/useIsMobile";
@@ -24,11 +25,18 @@ export const Overview = () => {
       <Helmet>
         <title>Blog - Axel Boven Coaching</title>
       </Helmet>
+      <Stack spacing={0} w='full'>
+      <QuoteWithCTASection
+          title={
+            '"The use of our intelligence quite properly gives us pleasure. In this respect the brain is like a muscle. When we think well, we feel good. Understanding is a kind of ecstacy."'
+          }
+        />
       <Box bg="themeGreen.50" minH="100vh">
-        <PageContainer>
+        <PageContainer hasCustomHeading>
           <ListofBlogPosts />
         </PageContainer>
       </Box>
+      </Stack>
     </>
   );
 };
