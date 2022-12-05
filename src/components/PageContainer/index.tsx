@@ -1,6 +1,17 @@
 import { Container } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 
-export const PageContainer = (props: PropsWithChildren) => (
-  <Container maxWidth={"container.md"} py={40} {...props} />
+interface PageContainerProps {
+  hasCustomHeading?: boolean;
+}
+export const PageContainer = ({
+  hasCustomHeading,
+  ...props
+}: PropsWithChildren<PageContainerProps>) => (
+  <Container
+    maxWidth={"container.md"}
+    pb={40}
+    pt={hasCustomHeading ? 20 : 40}
+    {...props}
+  />
 );
