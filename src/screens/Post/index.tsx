@@ -15,13 +15,14 @@ import { PostLoadingPlaceholder } from "./PostLoadingPlaceholder";
 
 interface PostProps {
   postId: string;
-  category: {
+  category?: {
     name: string;
     path: string;
   };
+  hideDate?: boolean;
 }
 
-export const Post = ({ postId, category }: PostProps) => {
+export const Post = ({ postId, category, hideDate }: PostProps) => {
   const { isLoading, post } = useLoadPost(postId);
 
   if (isLoading) {
@@ -40,7 +41,7 @@ export const Post = ({ postId, category }: PostProps) => {
         <title>{`${post.title} - Axel Boven Coaching`}</title>
       </Helmet>
       <Stack spacing={10}>
-        <Breadcrumb
+        {category && <Breadcrumb
           colorScheme={"themeGreen"}
           fontSize="lg"
           spacing="8px"
@@ -60,13 +61,14 @@ export const Post = ({ postId, category }: PostProps) => {
             <BreadcrumbLink>{post.title}</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
+        }
         <Stack spacing={5}>
           <Heading as="h1" size="3xl">
             {post.title}
           </Heading>
-          <Text as={"em"}>
+          {!hideDate && <Text as={"em"}>
             <HumanDate date={postDate} />
-          </Text>
+          </Text>}
         </Stack>
         <div
           className="wp-post"

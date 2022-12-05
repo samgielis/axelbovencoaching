@@ -48,3 +48,8 @@
 .wp-post cite {
     font-size: var(--chakra-fontSizes-md);
 }
+
+.wp-post img {
+    padding-top: var(--chakra-space-8);
+    padding-bottom: var(--chakra-space-8);
+}
