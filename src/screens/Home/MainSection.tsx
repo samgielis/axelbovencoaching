@@ -1,9 +1,10 @@
 import { Box, Center, Container, Heading, VStack } from "@chakra-ui/react";
 import { useIsMobile } from "../../hooks/useIsMobile";
+import { ScrollButton } from "./components/ScrollButton";
 
 export const MainSection = () => {
   const isMobile = useIsMobile();
-  const height = isMobile ? "55vh" : "85vh";
+  const height = isMobile ? "55vh" : "100vh";
   return (
     <Box
       w="100%"
@@ -36,6 +37,7 @@ export const MainSection = () => {
               Axel Boven
             </Heading>
             <Heading>Vrij en Verbonden Onderweg</Heading>
+            {!isMobile && <ScrollButton />}
           </VStack>
         </Center>
       </Container>
