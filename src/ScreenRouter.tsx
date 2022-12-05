@@ -30,7 +30,10 @@ export const ScreenRouter = () => {
           <Route path={`${BLOG_PATH}/*`} element={<Blog />} />
           <Route path={CONTACT_PATH} element={<Contact />} />
           <Route path={PRIVACY_BELEID_PATH} element={<PrivacyBeleid />} />
-          <Route path={ALGEMENE_VOORWAARDEN_PATH} element={<AlgemeneVoorwaarden />} />
+          <Route
+            path={ALGEMENE_VOORWAARDEN_PATH}
+            element={<AlgemeneVoorwaarden />}
+          />
         </Routes>
       </Layout>
     </BrowserRouter>
