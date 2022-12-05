@@ -10,12 +10,28 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Card } from "../../components/Card";
 import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
 import { TitledSection } from "../../components/TitledSection";
 
+declare global {
+   var Calendly: any;
+}
+
 export const Contact = () => {
+  useEffect(() => {
+    const calendlyContainer = document.getElementById('calendly-container');
+    if (calendlyContainer?.hasChildNodes()) return;
+    Calendly.initInlineWidget({
+      url: 'https://calendly.com/axelboven/kennismakingsgesprek?text_color=1a202c&primary_color=7ba05f&hide_landing_page_details=1&hide_gdpr_banner=1',
+      parentElement: document.getElementById('calendly-container'),
+      prefill: {},
+      utm: {}
+     });
+  });
+
   return (
     <>
       <Helmet>
@@ -97,20 +113,13 @@ export const Contact = () => {
           bgColor={"themeGreen.100"}
           title={"Kennismakingsgesprek"}
         >
-          <Stack>
+          <Stack spacing={4}>
             <Text fontSize="xl">
               Heb je nog vragen? Of wil je graag een individueel traject
               starten? Reserveer dan hier je plekje voor een (gratis) online
               kennismakingsgesprek via Zoom.
             </Text>
-            {/*<!-- Calendly inline widget begin -->*/}
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/axelboven?text_color=1a202c&primary_color=7ba05f&hide_landing_page_details=1&hide_gdpr_banner=1"
-              style={{ width: "100%", height: "1000px" }}
-            ></div>
-            
-            {/*<!-- Calendly inline widget end -->*/}
+            <div id="calendly-container" style={{height:'1000px'}}/>
           </Stack>
         </TitledSection>
       </Stack>
