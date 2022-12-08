@@ -4,20 +4,29 @@ import {
   ButtonGroup,
   chakra,
   Collapse,
+  Container,
+  Flex,
+  Heading,
+  HStack,
   IconButton,
   Stack,
+  Text,
   useDisclosure,
+  Link as ExternalLink,
 } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, useMatch } from "react-router-dom";
+import { AppLink } from "./components/AppLink";
 import { useIsMobile } from "./hooks/useIsMobile";
 import {
   AANBOD_PATH,
+  ALGEMENE_VOORWAARDEN_PATH,
   BLOG_PATH,
   CONTACT_PATH,
   HOME_PATH,
   MIJN_MISSIE_PATH,
+  PRIVACY_BELEID_PATH,
 } from "./routes";
 
 export const Layout = ({ children }: PropsWithChildren) => {
@@ -25,9 +34,52 @@ export const Layout = ({ children }: PropsWithChildren) => {
     <Box w="full" minH="100vh">
       <NavigationMenu />
       {children}
+      <BottomMenu />
     </Box>
   );
 };
+
+const BottomMenu = () => {
+  return <Flex w='100%' bg='themeGreen.600' color='white' py={20}>
+    <Container maxW='container.xl' centerContent>
+      <Stack spacing={8}>
+        <Heading as='h3' size='xl'>Axel Boven Coaching</Heading>
+        <HStack spacing={20} alignItems='stretch'>
+
+          <Stack spacing={4}>
+            <Heading as='h3' size='lg' color='themeGreen.900'>Contact</Heading>
+            <Stack spacing={1} >
+              <Text>Schoterweg 242B
+              </Text>
+              <Text> 3980 Tessenderlo
+              </Text>
+
+            </Stack>
+            <ExternalLink  href="mailto:info@axelbovencoaching.be">info@axelbovencoaching.be</ExternalLink>
+          </Stack>
+
+          <Stack spacing={4}>
+            <Heading as='h3' size='lg' color='themeGreen.900'>Policies</Heading>
+            <Stack spacing={1} >
+              <AppLink to={PRIVACY_BELEID_PATH}>Privacybeleid</AppLink>
+              <AppLink to={ALGEMENE_VOORWAARDEN_PATH}>Algemene voorwaarden</AppLink>
+            </Stack>
+          </Stack>
+
+          <Stack spacing={4}>
+            <Heading as='h3' size='lg' color='themeGreen.900'>Volgen</Heading>
+            <Stack spacing={1} >
+              <ExternalLink href={'https://www.instagram.com/axel.boven.coaching/'}>Instagram</ExternalLink>
+              <ExternalLink href={'https://www.linkedin.com/in/axelboven/'}>LinkedIn</ExternalLink>
+            </Stack>
+          </Stack>
+        </HStack>
+      </Stack>
+
+    </Container>
+
+  </Flex>
+}
 
 const NavigationMenu = () => {
   const isMobile = useIsMobile();
