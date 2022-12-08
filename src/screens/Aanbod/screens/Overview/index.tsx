@@ -45,13 +45,13 @@ const AanbodContent = () => {
 
   const workshops =
     category?.posts.filter(
-      (post) => !!Object.keys(post.tags).find((tag) => tag == "Workshop")
+      (post) => !!Object.keys(post.tags).find((tag) => tag === "Workshop")
     ) || [];
 
   const trajecten =
     category?.posts.filter(
       (post) =>
-        !!Object.keys(post.tags).find((tag) => tag == "Coaching traject")
+        !!Object.keys(post.tags).find((tag) => tag === "Coaching traject")
     ) || [];
 
   return (
