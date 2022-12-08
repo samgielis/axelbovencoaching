@@ -93,8 +93,8 @@ const DesktopOfferingCard = ({
       bg="white"
     >
       <HStack spacing={0} alignItems="stretch" h="100%">
-        <Image w="45%" src={imageSrc} alt={title} objectFit="cover" />
-        <Stack w="55%" p={4}>
+        <Image w="45%" maxW={'250px'} src={imageSrc} alt={title} objectFit="cover" />
+        <Stack flex={1} p={4}>
           <Stack>
             <OfferingTypeLabel type={type} />
             <Heading>{title}</Heading>
