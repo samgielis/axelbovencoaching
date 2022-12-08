@@ -125,20 +125,6 @@ export const Contact = () => {
           </Stack>
         </TitledSection>
 
-        <TitledSection title="Policies" bgColor={"themeGreen.500"}>
-          <Stack w="100%" p={4}>
-            <Button as={Link} colorScheme={"gray"} to={PRIVACY_BELEID_PATH}>
-              Privacybeleid
-            </Button>
-            <Button
-              as={Link}
-              colorScheme={"gray"}
-              to={ALGEMENE_VOORWAARDEN_PATH}
-            >
-              Algemene voorwaarden
-            </Button>
-          </Stack>
-        </TitledSection>
       </Stack>
     </>
   );
