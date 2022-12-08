@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 type OfferingType = "WORKSHOP" | "TRAJECT";
 
-interface OfferingCardProps extends BaseOfferingCardProps{
+interface OfferingCardProps extends BaseOfferingCardProps {
   isMobile?: boolean;
 }
 
@@ -26,12 +26,12 @@ interface BaseOfferingCardProps {
   href: string;
 }
 
-export const OfferingCard = ({isMobile, ...props}: OfferingCardProps) => {
+export const OfferingCard = ({ isMobile, ...props }: OfferingCardProps) => {
   if (isMobile) {
-    return <MobileOfferingCard {...props}/>
+    return <MobileOfferingCard {...props} />;
   }
-  return <DesktopOfferingCard {...props}/>
-}
+  return <DesktopOfferingCard {...props} />;
+};
 
 const MobileOfferingCard = ({
   type,
@@ -50,7 +50,7 @@ const MobileOfferingCard = ({
       flex={1}
     >
       <Stack spacing={0} alignItems="stretch" h="100%">
-        <Image maxHeight='200px' src={imageSrc} alt={title} objectFit="cover" />
+        <Image maxHeight="200px" src={imageSrc} alt={title} objectFit="cover" />
         <Stack p={4} flex={1}>
           <Stack>
             <OfferingTypeLabel type={type} />
@@ -93,7 +93,13 @@ const DesktopOfferingCard = ({
       bg="white"
     >
       <HStack spacing={0} alignItems="stretch" h="100%">
-        <Image w="45%" maxW={'250px'} src={imageSrc} alt={title} objectFit="cover" />
+        <Image
+          w="45%"
+          maxW={"250px"}
+          src={imageSrc}
+          alt={title}
+          objectFit="cover"
+        />
         <Stack flex={1} p={4}>
           <Stack>
             <OfferingTypeLabel type={type} />

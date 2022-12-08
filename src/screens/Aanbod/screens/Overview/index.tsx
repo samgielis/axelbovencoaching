@@ -1,4 +1,14 @@
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Heading, Spacer, Stack } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  Heading,
+  Spacer,
+  Stack,
+} from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
 import { PageContainer } from "../../../../components/PageContainer";
 import { QuoteWithCTASection } from "../../../../components/QuoteWithCTASection";
@@ -14,11 +24,7 @@ export const Overview = () => {
         <title>Aanbod - Axel Boven Coaching</title>
       </Helmet>
       <Stack spacing={0} w="full">
-        <QuoteWithCTASection
-          title={
-            '"The fire, it speaks."'
-          }
-        />
+        <QuoteWithCTASection title={'"The fire, it speaks."'} />
         <Box bg="themeGreen.50" minH="100vh">
           <PageContainer hasCustomHeading>
             <AanbodContent />
@@ -37,20 +43,23 @@ const AanbodContent = () => {
     return <PostLoadingPlaceholder />;
   }
 
-  const workshops = category?.posts.filter(post => !!Object.keys(post.tags).find(
-    (tag) => tag == "Workshop"
-  )) || [];
+  const workshops =
+    category?.posts.filter(
+      (post) => !!Object.keys(post.tags).find((tag) => tag == "Workshop")
+    ) || [];
 
-  const trajecten = category?.posts.filter(post => !!Object.keys(post.tags).find(
-    (tag) => tag == "Coaching traject"
-  )) || [];
+  const trajecten =
+    category?.posts.filter(
+      (post) =>
+        !!Object.keys(post.tags).find((tag) => tag == "Coaching traject")
+    ) || [];
 
   return (
     <Stack spacing={10}>
       <Heading size="3xl">Aanbod</Heading>
 
-      <Accordion allowToggle allowMultiple defaultIndex={[0,1]} >
-        <AccordionItem border='none'>
+      <Accordion allowToggle allowMultiple defaultIndex={[0, 1]}>
+        <AccordionItem border="none">
           <AccordionButton px={1}>
             <Heading size="lg">Trajecten</Heading>
             <Spacer />
@@ -60,7 +69,6 @@ const AanbodContent = () => {
           <AccordionPanel px={0} pb={20}>
             <Stack spacing={4}>
               {trajecten.map((post) => {
-
                 return (
                   <OfferingCard
                     href={`/aanbod/${post.slug}`}
@@ -77,7 +85,7 @@ const AanbodContent = () => {
           </AccordionPanel>
         </AccordionItem>
 
-        <AccordionItem border='none'>
+        <AccordionItem border="none">
           <AccordionButton px={1}>
             <Heading size="lg">Workshops</Heading>
             <Spacer />
@@ -86,9 +94,7 @@ const AanbodContent = () => {
           </AccordionButton>
           <AccordionPanel px={0} pb={4}>
             <Stack spacing={4}>
-
               {workshops.map((post) => {
-
                 return (
                   <OfferingCard
                     href={`/aanbod/${post.slug}`}
@@ -98,7 +104,6 @@ const AanbodContent = () => {
                     imageSrc={post.featured_image}
                     summary={post.excerpt}
                     isMobile={isMobile}
-
                   />
                 );
               })}
@@ -106,7 +111,6 @@ const AanbodContent = () => {
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
-
     </Stack>
   );
 };
