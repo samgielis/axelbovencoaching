@@ -11,11 +11,9 @@ import {
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { Card } from "../../components/Card";
 import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
 import { TitledSection } from "../../components/TitledSection";
-import { ALGEMENE_VOORWAARDEN_PATH, PRIVACY_BELEID_PATH } from "../../routes";
 
 declare global {
   var Calendly: any;
@@ -124,7 +122,6 @@ export const Contact = () => {
             <div id="calendly-container" style={{ height: "900px" }} />
           </Stack>
         </TitledSection>
-
       </Stack>
     </>
   );
