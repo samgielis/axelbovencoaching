@@ -2,18 +2,20 @@ import {
   Box,
   Button,
   ButtonGroup,
+  Center,
   chakra,
   Collapse,
   Container,
   Flex,
   Heading,
-  HStack,
   IconButton,
+  Link as ExternalLink,
   Stack,
   Text,
   useDisclosure,
-  Link as ExternalLink,
 } from "@chakra-ui/react";
+import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PropsWithChildren } from "react";
 import { FaBars } from "react-icons/fa";
@@ -29,7 +31,6 @@ import {
   MIJN_MISSIE_PATH,
   PRIVACY_BELEID_PATH,
 } from "./routes";
-import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export const Layout = ({ children }: PropsWithChildren) => {
   return (
@@ -43,47 +44,90 @@ export const Layout = ({ children }: PropsWithChildren) => {
 
 const BottomMenu = () => {
   const isMobile = useIsMobile();
-  return <Flex w='100%' bg='themeGreen.600' color='white' py={20}>
-    <Container maxW='container.xl' centerContent>
-      <Stack spacing={8}>
-        <Heading as='h3' size='xl'>Axel Boven Coaching</Heading>
-        <Stack spacing={20} direction={isMobile ?'column' : 'row'} alignItems='stretch'>
+  return (
+    <Flex w="100%" bg="themeGreen.600" color="white" py={20}>
+      <Container maxW="container.xl" centerContent>
+        <Stack spacing={10}>
+          <Heading as="h3" size="xl">
+            Axel Boven Coaching
+          </Heading>
 
-          <Stack spacing={4}>
-            <Heading as='h3' size='lg' color='themeGreen.900'>Contact</Heading>
-            <Stack spacing={1} >
-              <Text>Schoterweg 242B
-              </Text>
-              <Text> 3980 Tessenderlo
-              </Text>
-
+          <Stack
+            spacing={20}
+            direction={isMobile ? "column" : "row"}
+            alignItems="stretch"
+          >
+            <Stack spacing={4}>
+              <Heading as="h3" size="lg" color="themeGreen.900">
+                Contact
+              </Heading>
+              <Stack spacing={1}>
+                <Text>Schoterweg 242B</Text>
+                <Text> 3980 Tessenderlo</Text>
+              </Stack>
+              <ExternalLink href="mailto:info@axelbovencoaching.be">
+                info@axelbovencoaching.be
+              </ExternalLink>
             </Stack>
-            <ExternalLink  href="mailto:info@axelbovencoaching.be">info@axelbovencoaching.be</ExternalLink>
+
+            <Stack spacing={4}>
+              <Heading as="h3" size="lg" color="themeGreen.900">
+                Policies
+              </Heading>
+              <Stack spacing={1}>
+                <AppLink to={PRIVACY_BELEID_PATH}>Privacybeleid</AppLink>
+                <AppLink to={ALGEMENE_VOORWAARDEN_PATH}>
+                  Algemene voorwaarden
+                </AppLink>
+              </Stack>
+            </Stack>
+
+            <Stack spacing={4}>
+              <Heading as="h3" size="lg" color="themeGreen.900">
+                Volgen
+              </Heading>
+              <Stack spacing={1}>
+                <Text>
+                  <chakra.span fontSize="lg" pr="1">
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </chakra.span>{" "}
+                  <ExternalLink
+                    href={"https://www.instagram.com/axel.boven.coaching/"}
+                  >
+                    Instagram
+                  </ExternalLink>
+                </Text>
+                <Text>
+                  <chakra.span fontSize="lg" pr="1">
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </chakra.span>{" "}
+                  <ExternalLink href={"https://www.linkedin.com/in/axelboven/"}>
+                    LinkedIn
+                  </ExternalLink>
+                </Text>
+              </Stack>
+            </Stack>
           </Stack>
 
-          <Stack spacing={4}>
-            <Heading as='h3' size='lg' color='themeGreen.900'>Policies</Heading>
-            <Stack spacing={1} >
-              <AppLink to={PRIVACY_BELEID_PATH}>Privacybeleid</AppLink>
-              <AppLink to={ALGEMENE_VOORWAARDEN_PATH}>Algemene voorwaarden</AppLink>
-            </Stack>
-          </Stack>
-
-          <Stack spacing={4}>
-            <Heading as='h3' size='lg' color='themeGreen.900'>Volgen</Heading>
-            <Stack spacing={1} >
-              <Text><FontAwesomeIcon fontSize={'var(--chakra-fontSizes-lg)'} icon={faInstagram} /> <ExternalLink href={'https://www.instagram.com/axel.boven.coaching/'}>Instagram</ExternalLink></Text>
-              <Text><FontAwesomeIcon fontSize={'var(--chakra-fontSizes-lg)'} icon={faLinkedin} /> <ExternalLink href={'https://www.linkedin.com/in/axelboven/'}>LinkedIn</ExternalLink></Text>
-            </Stack>
-          </Stack>
-
+          <Center>
+            <Heading mt={10} as="h3" size="sm">
+              <chakra.span pr="1" color="themeGreen.200">
+                <FontAwesomeIcon icon={faHeart} />
+              </chakra.span>{" "}
+              made from friendship by{" "}
+              <ExternalLink
+                color="themeGreen.200"
+                href="https://www.linkedin.com/in/samgielis/"
+              >
+                Sam Gielis
+              </ExternalLink>
+            </Heading>
+          </Center>
         </Stack>
-      </Stack>
-
-    </Container>
-
-  </Flex>
-}
+      </Container>
+    </Flex>
+  );
+};
 
 const NavigationMenu = () => {
   const isMobile = useIsMobile();

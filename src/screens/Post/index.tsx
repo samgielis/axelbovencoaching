@@ -39,7 +39,10 @@ export const Post = ({ postId, category, hideDate }: PostProps) => {
     <>
       <Helmet>
         <title>{`${post.title} - Axel Boven Coaching`}</title>
-        <meta name="description" content={post.excerpt?.replace( /(<([^>]+)>)/ig, '')} />
+        <meta
+          name="description"
+          content={post.excerpt?.replace(/(<([^>]+)>)/gi, "")}
+        />
       </Helmet>
       <Stack spacing={10}>
         {category && (
