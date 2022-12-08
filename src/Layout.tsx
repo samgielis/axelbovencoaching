@@ -42,11 +42,12 @@ export const Layout = ({ children }: PropsWithChildren) => {
 };
 
 const BottomMenu = () => {
+  const isMobile = useIsMobile();
   return <Flex w='100%' bg='themeGreen.600' color='white' py={20}>
     <Container maxW='container.xl' centerContent>
       <Stack spacing={8}>
         <Heading as='h3' size='xl'>Axel Boven Coaching</Heading>
-        <HStack spacing={20} alignItems='stretch'>
+        <Stack spacing={20} direction={isMobile ?'column' : 'row'} alignItems='stretch'>
 
           <Stack spacing={4}>
             <Heading as='h3' size='lg' color='themeGreen.900'>Contact</Heading>
@@ -75,7 +76,8 @@ const BottomMenu = () => {
               <Text><FontAwesomeIcon fontSize={'var(--chakra-fontSizes-lg)'} icon={faLinkedin} /> <ExternalLink href={'https://www.linkedin.com/in/axelboven/'}>LinkedIn</ExternalLink></Text>
             </Stack>
           </Stack>
-        </HStack>
+
+        </Stack>
       </Stack>
 
     </Container>
