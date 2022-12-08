@@ -14,6 +14,7 @@ import {
   useDisclosure,
   Link as ExternalLink,
 } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PropsWithChildren } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, useMatch } from "react-router-dom";
@@ -28,6 +29,7 @@ import {
   MIJN_MISSIE_PATH,
   PRIVACY_BELEID_PATH,
 } from "./routes";
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export const Layout = ({ children }: PropsWithChildren) => {
   return (
@@ -69,8 +71,8 @@ const BottomMenu = () => {
           <Stack spacing={4}>
             <Heading as='h3' size='lg' color='themeGreen.900'>Volgen</Heading>
             <Stack spacing={1} >
-              <ExternalLink href={'https://www.instagram.com/axel.boven.coaching/'}>Instagram</ExternalLink>
-              <ExternalLink href={'https://www.linkedin.com/in/axelboven/'}>LinkedIn</ExternalLink>
+              <Text><FontAwesomeIcon fontSize={'var(--chakra-fontSizes-lg)'} icon={faInstagram} /> <ExternalLink href={'https://www.instagram.com/axel.boven.coaching/'}>Instagram</ExternalLink></Text>
+              <Text><FontAwesomeIcon fontSize={'var(--chakra-fontSizes-lg)'} icon={faLinkedin} /> <ExternalLink href={'https://www.linkedin.com/in/axelboven/'}>LinkedIn</ExternalLink></Text>
             </Stack>
           </Stack>
         </HStack>
