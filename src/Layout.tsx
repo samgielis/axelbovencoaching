@@ -68,6 +68,7 @@ const BottomMenu = () => {
               <ExternalLink href="mailto:info@axelbovencoaching.be">
                 info@axelbovencoaching.be
               </ExternalLink>
+              <Text>BE0792.236.810</Text>
             </Stack>
 
             <Stack spacing={4}>

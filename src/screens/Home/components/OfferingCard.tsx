@@ -64,10 +64,8 @@ const MobileOfferingCard = ({
           <Spacer />
 
           <ButtonGroup size="sm" colorScheme="themeGreen">
+            <Spacer />
             <Button as={Link} to={href} flex={0.5}>
-              Starten
-            </Button>
-            <Button as={Link} to={href} flex={0.5} variant="link">
               Meer leren
             </Button>
           </ButtonGroup>
@@ -113,10 +111,8 @@ const DesktopOfferingCard = ({
           <Spacer />
 
           <ButtonGroup size="sm" colorScheme="themeGreen">
+            <Spacer />
             <Button as={Link} to={href} flex={0.5}>
-              Starten
-            </Button>
-            <Button as={Link} to={href} flex={0.5} variant="link">
               Meer leren
             </Button>
           </ButtonGroup>
