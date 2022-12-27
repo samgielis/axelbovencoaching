@@ -1,19 +1,10 @@
-import {
-  Button,
-  FormControl,
-  FormLabel,
-  Heading,
-  Input,
-  SimpleGrid,
-  Stack,
-  Text,
-  Textarea,
-} from "@chakra-ui/react";
+import { Button, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Card } from "../../components/Card";
 import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
 import { TitledSection } from "../../components/TitledSection";
+import { ContactForm } from "./ContactForm";
 
 declare global {
   var Calendly: any;
@@ -45,52 +36,7 @@ export const Contact = () => {
         <TitledSection bgColor={"themeGreen.100"} title={"Contact"}>
           <SimpleGrid spacing={5} w="full" minChildWidth={"350px"}>
             <Card color="bodyText" p={4} flex={1}>
-              <Stack spacing={4}>
-                <Heading size="lg">Email</Heading>
-                {/* When you change this, change helper form in index as well */}
-                <form name="contact" method="POST" data-netlify="true">
-                  <input type="hidden" name="form-name" value="contact" />
-
-                  <Stack>
-                    <FormControl>
-                      <FormLabel>Onderwerp</FormLabel>
-                      <Input type="text" name="subject" />
-                    </FormControl>
-
-                    <FormControl>
-                      <FormLabel>Naam</FormLabel>
-                      <Input type="text" name="name" />
-                    </FormControl>
-
-                    <FormControl>
-                      <FormLabel>Email</FormLabel>
-                      <Input type="email" name="email" />
-                    </FormControl>
-
-                    <FormControl>
-                      <FormLabel>Bericht</FormLabel>
-                      <Textarea name="message" />
-                    </FormControl>
-
-                    <Button type="submit" colorScheme="themeGreen">
-                      Versturen
-                    </Button>
-                  </Stack>
-                </form>
-                <Text fontSize="lg">
-                  Je kan ook gewoon bij mij terecht via{" "}
-                  <Button
-                    size="lg"
-                    href="mailto:info@axelbovencoaching.be"
-                    as={"a"}
-                    variant="link"
-                    colorScheme="themeGreen"
-                  >
-                    info@axelbovencoaching.be
-                  </Button>
-                  .
-                </Text>
-              </Stack>
+              <ContactForm />
             </Card>
 
             <Stack flex={1} color="white" spacing={4} h="full">
@@ -117,7 +63,20 @@ export const Contact = () => {
             <Text fontSize="xl">
               Heb je nog vragen? Of wil je graag een individueel traject
               starten? Reserveer dan hier je plekje voor een (gratis) online
-              kennismakingsgesprek via Zoom.
+              kennismakingsgesprek via Zoom. Vind je geen geschikt moment? Stuur
+              dan een mailtje naar{" "}
+              <Button
+                size="lg"
+                href="mailto:info@axelbovencoaching.be"
+                as={"a"}
+                variant="link"
+                color="white"
+                colorScheme="whiteAlpha"
+              >
+                info@axelbovencoaching.be
+              </Button>{" "}
+              met enkele momenten die wel zouden lukken, dan bekijk ik wat
+              haalbaar is.
             </Text>
             <div id="calendly-container" style={{ height: "900px" }} />
           </Stack>
