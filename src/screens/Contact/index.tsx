@@ -118,6 +118,16 @@ export const Contact = () => {
               Heb je nog vragen? Of wil je graag een individueel traject
               starten? Reserveer dan hier je plekje voor een (gratis) online
               kennismakingsgesprek via Zoom.
+              Vind je geen geschikt moment? Stuur dan een mailtje naar <Button
+                    size="lg"
+                    href="mailto:info@axelbovencoaching.be"
+                    as={"a"}
+                    variant="link"
+                    color='white'
+                    colorScheme="whiteAlpha"
+                  >
+                    info@axelbovencoaching.be
+                  </Button> met enkele momenten die wel zouden lukken, dan bekijk ik wat haalbaar is.
             </Text>
             <div id="calendly-container" style={{ height: "900px" }} />
           </Stack>
