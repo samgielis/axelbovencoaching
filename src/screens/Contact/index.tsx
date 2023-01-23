@@ -62,7 +62,7 @@ export const Contact = () => {
           <Stack spacing={4}>
             <Text fontSize="xl">
               Heb je nog vragen? Of wil je graag een individueel traject
-              starten? Reserveer dan hier je plekje voor een (gratis) online
+              starten? Reserveer dan hier je plekje voor een gratis online
               kennismakingsgesprek via Zoom. Vind je geen geschikt moment? Stuur
               dan een mailtje naar{" "}
               <Button
