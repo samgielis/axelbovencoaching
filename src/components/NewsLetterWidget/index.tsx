@@ -89,7 +89,7 @@ export const NewsLetterWidget = () => {
     setTimeout(() => {
       onOpen();
     }, 2000);
-  }, []);
+  }, [onOpen]);
 
   const AwareStack = isMobile ? Stack : HStack;
   return (
