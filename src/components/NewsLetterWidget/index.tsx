@@ -21,7 +21,7 @@ export const NewsLetterWidget = () => {
         const handleError = () => {
             toast({
                 title: "Er ging iets mis.",
-                description: "Probeer het later nog eens of contacteer ons op info@bertenmarietrouwen.be.",
+                description: "Probeer het later nog eens of contacteer me op info@axelbovencoaching.be.",
                 status: "error",
                 isClosable: true,
             });
