@@ -38,7 +38,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
     <Box w="full" minH="100vh">
       <NavigationMenu />
       {children}
-      <NewsLetterWidget/>
+      <NewsLetterWidget />
       <BottomMenu />
     </Box>
   );
