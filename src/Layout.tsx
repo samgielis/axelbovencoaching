@@ -21,6 +21,7 @@ import { PropsWithChildren } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, useMatch } from "react-router-dom";
 import { AppLink } from "./components/AppLink";
+import { NewsLetterWidget } from "./components/NewsLetterWidget";
 import { useIsMobile } from "./hooks/useIsMobile";
 import {
   AANBOD_PATH,
@@ -37,6 +38,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
     <Box w="full" minH="100vh">
       <NavigationMenu />
       {children}
+      <NewsLetterWidget/>
       <BottomMenu />
     </Box>
   );
