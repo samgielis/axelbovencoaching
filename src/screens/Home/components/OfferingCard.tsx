@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-type OfferingType = "WORKSHOP" | "TRAJECT";
+export type OfferingType = "WORKSHOP" | "TRAJECT" | "EVENT";
 
 interface OfferingCardProps extends BaseOfferingCardProps {
   isMobile?: boolean;
@@ -131,7 +131,13 @@ const OfferingTypeLabel = ({ type }: OfferingTypeLabelProps) => {
     <span>
       <Badge
         fontSize="sm"
-        colorScheme={type === "TRAJECT" ? "themeGreen" : "softYellow"}
+        colorScheme={
+          type === "TRAJECT"
+            ? "themeGreen"
+            : type === "WORKSHOP"
+            ? "softYellow"
+            : "pink"
+        }
       >
         {type}
       </Badge>

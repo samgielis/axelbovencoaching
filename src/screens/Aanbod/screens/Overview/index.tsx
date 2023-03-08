@@ -135,7 +135,7 @@ const AanbodContent = () => {
                     <OfferingCard
                       href={`/aanbod/${post.slug}`}
                       key={post.ID}
-                      type={"TRAJECT"}
+                      type={"EVENT"}
                       title={post.title}
                       imageSrc={post.featured_image}
                       summary={post.excerpt}
