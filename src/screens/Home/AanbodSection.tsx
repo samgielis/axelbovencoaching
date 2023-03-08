@@ -18,6 +18,8 @@ export const AanbodSection = () => {
               (tag) => tag === "Workshop"
             )
               ? "WORKSHOP"
+              : Object.keys(post.tags).find((tag) => tag === "Event")
+              ? "EVENT"
               : "TRAJECT";
             return (
               <OfferingCard

@@ -54,62 +54,99 @@ const AanbodContent = () => {
         !!Object.keys(post.tags).find((tag) => tag === "Coaching traject")
     ) || [];
 
+  const events =
+    category?.posts.filter(
+      (post) => !!Object.keys(post.tags).find((tag) => tag === "Event")
+    ) || [];
+
   return (
     <Stack spacing={10}>
       <Heading size="3xl">Aanbod</Heading>
 
-      <Accordion allowToggle allowMultiple defaultIndex={[0, 1]}>
-        <AccordionItem border="none">
-          <AccordionButton px={1}>
-            <Heading size="lg">Trajecten</Heading>
-            <Spacer />
+      <Accordion allowToggle allowMultiple defaultIndex={[0, 1, 2]}>
+        {trajecten.length > 0 && (
+          <AccordionItem border="none">
+            <AccordionButton px={1}>
+              <Heading size="lg">Trajecten</Heading>
+              <Spacer />
 
-            <AccordionIcon />
-          </AccordionButton>
-          <AccordionPanel px={0} pb={20}>
-            <Stack spacing={4}>
-              {trajecten.map((post) => {
-                return (
-                  <OfferingCard
-                    href={`/aanbod/${post.slug}`}
-                    key={post.ID}
-                    type={"TRAJECT"}
-                    title={post.title}
-                    imageSrc={post.featured_image}
-                    summary={post.excerpt}
-                    isMobile={isMobile}
-                  />
-                );
-              })}
-            </Stack>
-          </AccordionPanel>
-        </AccordionItem>
+              <AccordionIcon />
+            </AccordionButton>
+            <AccordionPanel px={0} pb={20}>
+              <Stack spacing={4}>
+                {trajecten.map((post) => {
+                  return (
+                    <OfferingCard
+                      href={`/aanbod/${post.slug}`}
+                      key={post.ID}
+                      type={"TRAJECT"}
+                      title={post.title}
+                      imageSrc={post.featured_image}
+                      summary={post.excerpt}
+                      isMobile={isMobile}
+                    />
+                  );
+                })}
+              </Stack>
+            </AccordionPanel>
+          </AccordionItem>
+        )}
 
-        <AccordionItem border="none">
-          <AccordionButton px={1}>
-            <Heading size="lg">Workshops</Heading>
-            <Spacer />
+        {workshops.length > 0 && (
+          <AccordionItem border="none">
+            <AccordionButton px={1}>
+              <Heading size="lg">Workshops</Heading>
+              <Spacer />
 
-            <AccordionIcon />
-          </AccordionButton>
-          <AccordionPanel px={0} pb={4}>
-            <Stack spacing={4}>
-              {workshops.map((post) => {
-                return (
-                  <OfferingCard
-                    href={`/aanbod/${post.slug}`}
-                    key={post.ID}
-                    type={"WORKSHOP"}
-                    title={post.title}
-                    imageSrc={post.featured_image}
-                    summary={post.excerpt}
-                    isMobile={isMobile}
-                  />
-                );
-              })}
-            </Stack>
-          </AccordionPanel>
-        </AccordionItem>
+              <AccordionIcon />
+            </AccordionButton>
+            <AccordionPanel px={0} pb={4}>
+              <Stack spacing={4}>
+                {workshops.map((post) => {
+                  return (
+                    <OfferingCard
+                      href={`/aanbod/${post.slug}`}
+                      key={post.ID}
+                      type={"WORKSHOP"}
+                      title={post.title}
+                      imageSrc={post.featured_image}
+                      summary={post.excerpt}
+                      isMobile={isMobile}
+                    />
+                  );
+                })}
+              </Stack>
+            </AccordionPanel>
+          </AccordionItem>
+        )}
+
+        {events.length > 0 && (
+          <AccordionItem border="none">
+            <AccordionButton px={1}>
+              <Heading size="lg">Events</Heading>
+              <Spacer />
+
+              <AccordionIcon />
+            </AccordionButton>
+            <AccordionPanel px={0} pb={20}>
+              <Stack spacing={4}>
+                {events.map((post) => {
+                  return (
+                    <OfferingCard
+                      href={`/aanbod/${post.slug}`}
+                      key={post.ID}
+                      type={"EVENT"}
+                      title={post.title}
+                      imageSrc={post.featured_image}
+                      summary={post.excerpt}
+                      isMobile={isMobile}
+                    />
+                  );
+                })}
+              </Stack>
+            </AccordionPanel>
+          </AccordionItem>
+        )}
       </Accordion>
     </Stack>
   );
