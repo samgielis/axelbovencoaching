@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { WPConfig } from "../config";
+import { decodePost } from "../decoders";
 import { WPPost } from "../types/WPPost";
 
 interface useLoadPostReturn {
@@ -16,7 +17,7 @@ export function useLoadPost(postId: string): useLoadPostReturn {
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);
-        setPost(data);
+        setPost(decodePost(data));
       });
   }, [postId]);
 

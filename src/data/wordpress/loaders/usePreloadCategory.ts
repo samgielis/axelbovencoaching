@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { WPConfig } from "../config";
+import { decodePreloadCategory } from "../decoders";
 import { WPCategoryPreload } from "../types/WPCategory";
 
 interface usePreloadCategoryReturn {
@@ -20,7 +21,7 @@ export function usePreloadCategory(
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);
-        setCategory(data);
+        setCategory(decodePreloadCategory(data));
       });
   }, [categoryName]);
 
