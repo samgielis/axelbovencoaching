@@ -68,8 +68,9 @@ export const NewsLetterWidget = () => {
             reject();
           } else {
             toast({
-              title: "Ingeschreven.",
-              description: "Je bent succesvol ingeschreven op de nieuwsbrief.",
+              title: "Je bent succesvol ingeschreven op de nieuwsbrief.",
+              description:
+                "Je krijgt zo meteen een mail in je inbox. Check zeker ook je spam!",
               status: "success",
               isClosable: true,
             });
