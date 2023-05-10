@@ -3646,6 +3646,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mailchimp/mailchimp_marketing@npm:^3.0.80":
+  version: 3.0.80
+  resolution: "@mailchimp/mailchimp_marketing@npm:3.0.80"
+  dependencies:
+    dotenv: "npm:^8.2.0"
+    superagent: "npm:3.8.1"
+  checksum: 856f78bc1d7a83a62c2b632dffd6a4d5e034a3fdca8b6ab1850e4387286c82a604424fdefc9f9262098d49b0058f5212d6b47ef384ce1e619936f32ac01cd116
+  languageName: node
+  linkType: hard
+
 "@motionone/animation@npm:^10.12.0":
   version: 10.14.0
   resolution: "@motionone/animation@npm:10.14.0"
@@ -4386,6 +4396,13 @@ __metadata:
   version: 4.14.186
   resolution: "@types/lodash@npm:4.14.186"
   checksum: 27149ac2daac2c7f75ba1012a995a80382edab71addf23dc81f1659357753fdcdb5e6b6181c2de8cf2a8e23aa227ecfa8502bea8c7c24743a9ebae37a19e28f5
+  languageName: node
+  linkType: hard
+
+"@types/mailchimp__mailchimp_marketing@npm:^3.0.9":
+  version: 3.0.9
+  resolution: "@types/mailchimp__mailchimp_marketing@npm:3.0.9"
+  checksum: 1e7c4fce63eb913e4630f7e4f5e8f4d68b763d2e8fd1eabbc66de013da44126a3dd363d99b575301e644a9fa591e6d022fcc1093e82c7df9e3e71e62bbb12b33
   languageName: node
   linkType: hard
 
@@ -6050,7 +6067,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"combined-stream@npm:^1.0.8":
+"combined-stream@npm:^1.0.6, combined-stream@npm:^1.0.8":
   version: 1.0.8
   resolution: "combined-stream@npm:1.0.8"
   dependencies:
@@ -6098,6 +6115,13 @@ __metadata:
   version: 1.0.1
   resolution: "commondir@npm:1.0.1"
   checksum: f60c2547f7f133f9df8b65b7e4b0f370f946d1c2c01ee23c53a15d1a7d1b7cf3ee5205aa991545d9dfa2bbc9eaa4dbde99433f7cb66b0942ca0c290a15563e82
+  languageName: node
+  linkType: hard
+
+"component-emitter@npm:^1.2.0":
+  version: 1.3.0
+  resolution: "component-emitter@npm:1.3.0"
+  checksum: e24c33abfa9686ae480530207bf4fe1f096f307f2ad9126500e6c460b76b9c7dd648bc2c7b9eb10d622db69ff53f6f7ee65823719e3d94de301c80e1e944288c
   languageName: node
   linkType: hard
 
@@ -6194,6 +6218,13 @@ __metadata:
   version: 0.5.0
   resolution: "cookie@npm:0.5.0"
   checksum: 23bd6dd64f025869373c6f3c72a870b9bd0e0e6a0ffe734229c032d7aca51972ba584b39100c09141b18043e790862425aae4a60d7449fca565b21cdae0cb3c3
+  languageName: node
+  linkType: hard
+
+"cookiejar@npm:^2.1.0":
+  version: 2.1.4
+  resolution: "cookiejar@npm:2.1.4"
+  checksum: 61b09ec3009c2e499e91328e5c72986f0131030863b56cfc51546607f265ed976d118380f94cf88ffd322e4b5f658811c157214ec204e04ec40b7d4bb826a295
   languageName: node
   linkType: hard
 
@@ -6606,7 +6637,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^3.2.7":
+"debug@npm:^3.1.0, debug@npm:^3.2.7":
   version: 3.2.7
   resolution: "debug@npm:3.2.7"
   dependencies:
@@ -6947,6 +6978,13 @@ __metadata:
   version: 10.0.0
   resolution: "dotenv@npm:10.0.0"
   checksum: b05c5dcae77bd3be9f08af019a4225c4a6b884bce1a6a2571a6883ed51c2f0d6a79ff92491013c63b01642aa703eeb6583c57ee88159c4d600708b9d251c0b78
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^8.2.0":
+  version: 8.6.0
+  resolution: "dotenv@npm:8.6.0"
+  checksum: a58180cbaa6b7edec539461e4fd72fc9f2b7a181187a2e10942f047da15316f90f04eeeb18b7137049c6e5035a3451af103ddd7a8c691eac339d4e48e1bb1a08
   languageName: node
   linkType: hard
 
@@ -7667,6 +7705,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"extend@npm:^3.0.0":
+  version: 3.0.2
+  resolution: "extend@npm:3.0.2"
+  checksum: 312babdc3cfd8d5d003b109f02b8b639e8bdf2262f2f06acebfc3c991d8c004b73c2c10eaaaab00cfb2fb2a760845006806af10945b279d9390eed064505dfdb
+  languageName: node
+  linkType: hard
+
 "fast-deep-equal@npm:^3.1.1, fast-deep-equal@npm:^3.1.3":
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
@@ -7903,6 +7948,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"form-data@npm:^2.3.1":
+  version: 2.5.1
+  resolution: "form-data@npm:2.5.1"
+  dependencies:
+    asynckit: "npm:^0.4.0"
+    combined-stream: "npm:^1.0.6"
+    mime-types: "npm:^2.1.12"
+  checksum: 9163db247434cb612f94d27563ec5c19417fc15638f51502667d6f1133bc5b18bce1348aeaed6235c450e9885d8f4a43ea39e948404df7ff485a49a7a0ec84c9
+  languageName: node
+  linkType: hard
+
 "form-data@npm:^3.0.0":
   version: 3.0.1
   resolution: "form-data@npm:3.0.1"
@@ -7922,6 +7978,13 @@ __metadata:
     combined-stream: "npm:^1.0.8"
     mime-types: "npm:^2.1.12"
   checksum: de37c5684d843842d2cc2bc44a975d9fecdf1df30d061c90b62fc0caeeeeb45794bceaba7aa52ee5eae8ede01ba44215b26c58f41cf64271c513787b7241fce4
+  languageName: node
+  linkType: hard
+
+"formidable@npm:^1.1.1":
+  version: 1.2.6
+  resolution: "formidable@npm:1.2.6"
+  checksum: 12f094b552ccc83c8380f803f52f4fec353d79747efdd211b1c833ad2b87667ea2dd62e87649e184f9a874e7c2e88c5c387a032b14707cd2624cf4b9b1182981
   languageName: node
   linkType: hard
 
@@ -10280,7 +10343,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"methods@npm:~1.1.2":
+"methods@npm:^1.1.1, methods@npm:~1.1.2":
   version: 1.1.2
   resolution: "methods@npm:1.1.2"
   checksum: 4641d1eda8231aee6774d28a32249f1d4f04e2a58a86c4a968eed39d178d64594ed829301eb603356decc9bd423eacd68d6bde7874a291475800a1568e547d4e
@@ -10313,7 +10376,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mime@npm:1.6.0":
+"mime@npm:1.6.0, mime@npm:^1.4.1":
   version: 1.6.0
   resolution: "mime@npm:1.6.0"
   bin:
@@ -10530,11 +10593,13 @@ __metadata:
     "@fortawesome/free-brands-svg-icons": "npm:^6.2.1"
     "@fortawesome/free-solid-svg-icons": "npm:^6.2.1"
     "@fortawesome/react-fontawesome": "npm:^0.2.0"
+    "@mailchimp/mailchimp_marketing": "npm:^3.0.80"
     "@netlify/functions": "npm:^1.4.0"
     "@testing-library/jest-dom": "npm:^5.16.4"
     "@testing-library/react": "npm:^13.0.1"
     "@testing-library/user-event": "npm:^14.1.0"
     "@types/jest": "npm:^28.1.1"
+    "@types/mailchimp__mailchimp_marketing": "npm:^3.0.9"
     "@types/node": "npm:^12.0.0"
     "@types/react": "npm:^18.0.9"
     "@types/react-dom": "npm:^18.0.4"
@@ -12169,6 +12234,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"qs@npm:^6.5.1":
+  version: 6.11.1
+  resolution: "qs@npm:6.11.1"
+  dependencies:
+    side-channel: "npm:^1.0.4"
+  checksum: 5c9a1a3e1f2a7f53ca71d50ccabc4edb3018692b5d31a31ecad8db7a39d80c8f8ac5ed4cf49a881bac226f6b1c6e4add361e792e3146240c49d90cc610d738f4
+  languageName: node
+  linkType: hard
+
 "querystringify@npm:^2.1.1":
   version: 2.2.0
   resolution: "querystringify@npm:2.2.0"
@@ -12590,6 +12664,21 @@ __metadata:
     string_decoder: "npm:~1.1.1"
     util-deprecate: "npm:~1.0.1"
   checksum: 23c757366d6e0dd9115660c7313d10fc6a57fa50f5a62d1fde329cee13d4bc0de7f3db6d2f25722b1bd98171abe3d4bea626545556b4684864e20ecc70a2a57d
+  languageName: node
+  linkType: hard
+
+"readable-stream@npm:^2.0.5":
+  version: 2.3.8
+  resolution: "readable-stream@npm:2.3.8"
+  dependencies:
+    core-util-is: "npm:~1.0.0"
+    inherits: "npm:~2.0.3"
+    isarray: "npm:~1.0.0"
+    process-nextick-args: "npm:~2.0.0"
+    safe-buffer: "npm:~5.1.1"
+    string_decoder: "npm:~1.1.1"
+    util-deprecate: "npm:~1.0.1"
+  checksum: 266f740b0dc790395f96f784dc090c119a4b3388b2e90ed41cd1e51358dd50b2909d295cc4af7af3c07115b16c6264ce2c9c908b45681a821be741114fff8b3e
   languageName: node
   linkType: hard
 
@@ -13666,6 +13755,24 @@ __metadata:
   version: 4.0.13
   resolution: "stylis@npm:4.0.13"
   checksum: 3231e328da331d07673edc39f1bf0e741d0b891473764b116fe4f4eb22c595435f142860f7a54ddff32bf64ecdd3dbe356cc608a029c4f066d5c5b7f1315d996
+  languageName: node
+  linkType: hard
+
+"superagent@npm:3.8.1":
+  version: 3.8.1
+  resolution: "superagent@npm:3.8.1"
+  dependencies:
+    component-emitter: "npm:^1.2.0"
+    cookiejar: "npm:^2.1.0"
+    debug: "npm:^3.1.0"
+    extend: "npm:^3.0.0"
+    form-data: "npm:^2.3.1"
+    formidable: "npm:^1.1.1"
+    methods: "npm:^1.1.1"
+    mime: "npm:^1.4.1"
+    qs: "npm:^6.5.1"
+    readable-stream: "npm:^2.0.5"
+  checksum: 62ebc4b8b836a6b7588b6d9607415696d0e3760458914fee406f4b32041334aa39eec295fad3f2ae6617a2e2f2c01b4bcea388df853f3c009ccfbf552303a7fc
   languageName: node
   linkType: hard
 
