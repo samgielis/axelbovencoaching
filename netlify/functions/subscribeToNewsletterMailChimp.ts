@@ -3,7 +3,7 @@ import { Handler } from "@netlify/functions";
 import { Response } from "@netlify/functions/dist/function/response";
 const mailchimp: typeof Chimp = require("@mailchimp/mailchimp_marketing");
 
-const NEWSLETTER_CONTACT_LIST_ID = "7772";
+const NEWSLETTER_CONTACT_LIST_ID = "b7b5d204f4";
 
 interface SubsribeToNewsLetterPayload {
   email?: string;
