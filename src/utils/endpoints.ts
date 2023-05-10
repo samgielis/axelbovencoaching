@@ -1,5 +1,6 @@
 export const Endpoints = {
   NewsletterSubscribtion: createEndpoint("subscribeToNewsletter"),
+  NewsletterSubscribtionMailChimp: createEndpoint("subscribeToNewsletterMailChimp"),
   InsightAudiosSubscription: createEndpoint("applyForInsightAudios"),
 };
 

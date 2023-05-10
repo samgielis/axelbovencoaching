@@ -55,7 +55,7 @@ export const NewsLetterWidget = () => {
       });
     };
     return new Promise((resolve, reject) => {
-      fetch(Endpoints.NewsletterSubscribtion, {
+      fetch(Endpoints.NewsletterSubscribtionMailChimp, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
