@@ -38,7 +38,7 @@ export const InsightAudios = () => {
             bewuster leven, waar je tijd en ruimte vindt voor rust, plezier en
             geluk, zonder je ganse leven om te moeten gooien.
           </Heading>
-          <HStack spacing={5} w="full" justify={'center'}>
+          <HStack spacing={5} w="full"  justifyContent={'center'} display={['none', 'none', 'flex']}>
             <AudioCard
               title="Inzicht: Over Durven Vertragen en Leren Verdwalen"
               imgSrc="/audios/audio-1.jpg"
@@ -67,7 +67,7 @@ export const InsightAudios = () => {
             <Heading size="lg" mb="1em">
               Je leert...
             </Heading>
-            <List fontSize={"2xl"}>
+            <List fontSize={['md','lg', "2xl"]}>
               <ListItem>
                 ... het geheim van <b>vrij zijn in het moment</b> (en hoe de
                 vogeltjes je dat kunnen vertellen)
@@ -95,7 +95,7 @@ interface AudioCardProps {
 }
 const AudioCard = ({ imgSrc, title }: AudioCardProps) => {
   return (
-      <AspectRatio borderRadius={'md'} overflow={'hidden'} ratio={1} w="250px" pos='relative' boxShadow={'md'} >
+      <AspectRatio justifySelf={'center'} borderRadius={'md'} overflow={'hidden'} ratio={1} w={{base: "230px", lg:'250px'}} pos='relative' boxShadow={'md'} >
         <VStack >
           <Box bg="black" borderRadius={"md"}>
             <Image opacity={0.7} borderRadius={"md"} src={imgSrc} />
