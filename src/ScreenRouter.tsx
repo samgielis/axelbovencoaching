@@ -6,6 +6,7 @@ import {
   BLOG_PATH,
   CONTACT_PATH,
   HOME_PATH,
+  INSIGHT_AUDIOS,
   MIJN_MISSIE_PATH,
   PRIVACY_BELEID_PATH,
 } from "./routes";
@@ -17,6 +18,7 @@ import { Home } from "./screens/Home";
 import { MijnMissie } from "./screens/MijnMissie";
 import { PrivacyBeleid } from "./screens/Privacybeleid";
 import ScrollToTop from "./ScrollToTop";
+import { InsightAudios } from "./screens/InsightAudios";
 
 export const ScreenRouter = () => {
   return (
@@ -33,6 +35,10 @@ export const ScreenRouter = () => {
           <Route
             path={ALGEMENE_VOORWAARDEN_PATH}
             element={<AlgemeneVoorwaarden />}
+          />
+          <Route
+            path={INSIGHT_AUDIOS}
+            element={<InsightAudios />}
           />
         </Routes>
       </Layout>
