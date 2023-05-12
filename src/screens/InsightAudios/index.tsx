@@ -6,20 +6,34 @@ import {
   Heading,
   HStack,
   Image,
+  Link,
   List,
   ListItem,
   Stack,
+  useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import { faDownload, faHeadphones } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRef } from "react";
 import { Helmet } from "react-helmet-async";
+import { NewsLetterModal } from "../../components/NewsLetterModal";
 import { PageContainer } from "../../components/PageContainer";
 import { QuoteWithCTASection } from "../../components/QuoteWithCTASection";
 
 export const InsightAudios = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const downloadLinkRef = useRef<HTMLAnchorElement>(null);
+
+  const downloadAudios = () => {
+    downloadLinkRef.current?.click();
+  };
   return (
     <>
+      <Link href='/audios/insight-audios-axel-boven.zip' ref={downloadLinkRef} hidden download>
+        Download audio's
+      </Link>
       <Helmet>
         <title>
           Doorbreek je leven op automatische piloot met deze 3 insight audios -
@@ -29,7 +43,7 @@ export const InsightAudios = () => {
       <Stack w="full" spacing={0}>
         <QuoteWithCTASection
           title={
-            "Doorbreek je leven op automatische piloot met deze 3 insight audios"
+            "Doorbreek je leven op automatische piloot met deze 3 insight audio's"
           }
           pb={10}
         >
@@ -38,7 +52,12 @@ export const InsightAudios = () => {
             bewuster leven, waar je tijd en ruimte vindt voor rust, plezier en
             geluk, zonder je ganse leven om te moeten gooien.
           </Heading>
-          <HStack spacing={5} w="full"  justifyContent={'center'} display={['none', 'none', 'flex']}>
+          <HStack
+            spacing={5}
+            w="full"
+            justifyContent={"center"}
+            display={["none", "none", "flex"]}
+          >
             <AudioCard
               title="Inzicht: Over Durven Vertragen en Leren Verdwalen"
               imgSrc="/audios/audio-1.jpg"
@@ -57,8 +76,9 @@ export const InsightAudios = () => {
               size="lg"
               leftIcon={<FontAwesomeIcon icon={faDownload} />}
               colorScheme="themeGreen"
+              onClick={onOpen}
             >
-              Download audios
+              Download audio's
             </Button>
           </Flex>
         </QuoteWithCTASection>
@@ -67,7 +87,7 @@ export const InsightAudios = () => {
             <Heading size="lg" mb="1em">
               Je leert...
             </Heading>
-            <List fontSize={['md','lg', "2xl"]}>
+            <List fontSize={["md", "lg", "2xl"]}>
               <ListItem>
                 ... het geheim van <b>vrij zijn in het moment</b> (en hoe de
                 vogeltjes je dat kunnen vertellen)
@@ -85,6 +105,12 @@ export const InsightAudios = () => {
           </PageContainer>
         </Box>
       </Stack>
+      <NewsLetterModal
+        title="Schrijf je in op mijn nieuwsbrief en ontvang meteen je audio's!"
+        isOpen={isOpen}
+        onClose={onClose}
+        onSucces={downloadAudios}
+      />
     </>
   );
 };
@@ -95,35 +121,42 @@ interface AudioCardProps {
 }
 const AudioCard = ({ imgSrc, title }: AudioCardProps) => {
   return (
-      <AspectRatio justifySelf={'center'} borderRadius={'md'} overflow={'hidden'} ratio={1} w={{base: "230px", lg:'250px'}} pos='relative' boxShadow={'md'} >
-        <VStack >
-          <Box bg="black" borderRadius={"md"}>
-            <Image opacity={0.7} borderRadius={"md"} src={imgSrc} />
-          </Box>
-          <Heading
-            p={3}
-            background='linear-gradient(0deg, rgba(0,0,0,.5) 0%, rgba(0,212,255,0) 100%)'
-
-            pos={"absolute"}
-            bottom={0}
-            size="md"
-            color='white'
-          >
-            {title}
-          </Heading>
-          <Box
-            pos="absolute"
-            color={"white"}
-            fontSize={"7xl"}
-            top={0}
-            bottom={0}
-            pt={10}
-            margin="auto"
-            opacity={.9}
-          >
-            <FontAwesomeIcon icon={faHeadphones} />
-          </Box>
-        </VStack>
-      </AspectRatio>
+    <AspectRatio
+      justifySelf={"center"}
+      borderRadius={"md"}
+      overflow={"hidden"}
+      ratio={1}
+      w={{ base: "230px", lg: "250px" }}
+      pos="relative"
+      boxShadow={"md"}
+    >
+      <VStack>
+        <Box bg="black" borderRadius={"md"}>
+          <Image opacity={0.7} borderRadius={"md"} src={imgSrc} />
+        </Box>
+        <Heading
+          p={3}
+          background="linear-gradient(0deg, rgba(0,0,0,.5) 0%, rgba(0,212,255,0) 100%)"
+          pos={"absolute"}
+          bottom={0}
+          size="md"
+          color="white"
+        >
+          {title}
+        </Heading>
+        <Box
+          pos="absolute"
+          color={"white"}
+          fontSize={"7xl"}
+          top={0}
+          bottom={0}
+          pt={10}
+          margin="auto"
+          opacity={0.9}
+        >
+          <FontAwesomeIcon icon={faHeadphones} />
+        </Box>
+      </VStack>
+    </AspectRatio>
   );
 };
