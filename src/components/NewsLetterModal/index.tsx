@@ -45,7 +45,7 @@ export const NewsLetterModal = ({title, isOpen, onClose, onSucces}:NewsLetterMod
             body: JSON.stringify(values),
           })
             .then((response) => {
-              if (response.status === 200) {
+              if (response.status !== 200) {
                 handleError();
                 reject();
               } else {

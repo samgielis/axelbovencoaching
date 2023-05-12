@@ -44,7 +44,7 @@ function createError(message: string, code?: number): Response {
 function createResponse(message: string): Response {
     return {
         statusCode: 200,
-        body: JSON.stringify({ error: message })
+        body: JSON.stringify({ message })
     }
 }
 
