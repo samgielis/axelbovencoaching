@@ -25,7 +25,9 @@ import {
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useLocation } from "react-router";
 import { useIsMobile } from "../../hooks/useIsMobile";
+import { INSIGHT_AUDIOS } from "../../routes";
 import { Endpoints } from "../../utils/endpoints";
 
 export const NewsLetterWidget = () => {
@@ -36,6 +38,8 @@ export const NewsLetterWidget = () => {
     onClose: onCloseModal,
   } = useDisclosure();
   const isMobile = useIsMobile();
+
+  const isInsightAudios = useLocation().pathname === INSIGHT_AUDIOS;
 
   const toast = useToast();
   const {
@@ -87,10 +91,13 @@ export const NewsLetterWidget = () => {
   }
 
   useEffect(() => {
+    if (isInsightAudios) {
+      return;
+    }
     setTimeout(() => {
       onOpen();
     }, 2000);
-  }, [onOpen]);
+  }, [onOpen, isInsightAudios]);
 
   const AwareStack = isMobile ? Stack : HStack;
   return (
