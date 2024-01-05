@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { WPConfig } from "../config";
 import { decodePreloadCategory } from "../decoders";
 import { WPCategoryPreload } from "../types/WPCategory";
 
@@ -15,9 +14,7 @@ export function usePreloadCategory(
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    fetch(
-      `${WPConfig.apiEndpoint}/posts?category=${categoryName}&fields=slug,ID,excerpt,title,featured_image,tags,date`
-    )
+    fetch(`/.netlify/functions/category?categoryName=${categoryName}`)
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);
