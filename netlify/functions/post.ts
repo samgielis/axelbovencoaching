@@ -1,5 +1,6 @@
 import { Handler } from "@netlify/functions";
 import { Response } from "@netlify/functions/dist/function/response";
+import fetch from "node-fetch";
 
 const blogId = "coaching942.wordpress.com";
 export const WPConfig = {
@@ -33,7 +34,7 @@ function createError(message: string, code?: number): Response {
   };
 }
 
-function createResponse(message: string): Response {
+function createResponse(message: any): Response {
   return {
     statusCode: 200,
     body: JSON.stringify(message),
