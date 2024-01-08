@@ -50,7 +50,12 @@ const MobileOfferingCard = ({
       flex={1}
     >
       <Stack spacing={0} alignItems="stretch" h="100%">
-        <Image maxHeight="200px" src={imageSrc} alt={title} objectFit="cover" />
+        <Image
+          maxHeight="200px"
+          alt={title}
+          objectFit="cover"
+          src={`${imageSrc}?w=1000`}
+        />
         <Stack p={4} flex={1}>
           <Stack>
             <OfferingTypeLabel type={type} />
@@ -94,7 +99,7 @@ const DesktopOfferingCard = ({
         <Image
           w="45%"
           maxW={"250px"}
-          src={imageSrc}
+          src={`${imageSrc}?w=1000`}
           alt={title}
           objectFit="cover"
         />

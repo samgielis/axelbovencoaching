@@ -79,7 +79,7 @@ const BlogPostCard = ({ post }: { post: WPPostPreload }) => {
               h="100%"
               objectFit="cover"
               borderRadius="sm"
-              src={post.featured_image}
+              src={`${post.featured_image}?w=1000`}
             />
           </Box>
           <Stack spacing={5} flex={0.7}>

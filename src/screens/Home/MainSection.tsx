@@ -15,7 +15,7 @@ export const MainSection = () => {
       _before={{
         h: "100%",
         w: "100%",
-        bgImage: "/main.jpg",
+        bgImage: "/main-reduced.jpg",
         filter: "brightness(.95)",
         content: '""',
         pos: "absolute",
