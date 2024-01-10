@@ -29,6 +29,22 @@
         <priority>0.70</priority>
     </url>
     <url>
+        <loc>https://axelbovencoaching.be/aanbod/herfstbijeenkomst-voor-mannen</loc>
+        <priority>0.70</priority>
+    </url>
+     <url>
+        <loc>https://axelbovencoaching.be/aanbod/voel-speel-leef</loc>
+        <priority>0.70</priority>
+    </url>
+     <url>
+        <loc>https://axelbovencoaching.be/aanbod/wandelsessies-in-groep</loc>
+        <priority>0.70</priority>
+    </url>
+     <url>
+        <loc>https://axelbovencoaching.be/aanbod/trajecten-op-maat-voor-organisaties</loc>
+        <priority>0.70</priority>
+    </url>
+    <url>
         <loc>https://axelbovencoaching.be/blog/</loc>
         <priority>0.80</priority>
     </url>
@@ -42,6 +58,10 @@
     </url>
      <url>
         <loc>https://axelbovencoaching.be/blog/blog-hoe-ik-werk</loc>
+        <priority>0.70</priority>
+    </url>
+     <url>
+        <loc>https://axelbovencoaching.be/blog/blog-hoe-ik-werk-deel-2</loc>
         <priority>0.70</priority>
     </url>
     <url>
